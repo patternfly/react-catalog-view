@@ -1,1 +1,0 @@
-# {{ tmplr.extension_name }}
