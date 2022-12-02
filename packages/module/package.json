@@ -1,0 +1,70 @@
+{
+  "name": "@patternfly/react-catalog-view-extension",
+  "version": "4.93.3",
+  "description": "This library provides catalog view extensions for PatternFly 4 React.",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "patternfly:src": "src/",
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "scripts": {
+    "build": "yarn generate && yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc --build --verbose ./tsconfig.json",
+    "build:cjs": "tsc --build --verbose ./tsconfig.cjs.json",
+    "clean": "rimraf dist",
+    "docs:develop": "pf-docs-framework start",
+    "docs:build": "pf-docs-framework build all --output public",
+    "docs:serve": "pf-docs-framework serve public --port 5000",
+    "docs:screenshots": "pf-docs-framework screenshots --urlPrefix http://localhost:5000",
+    "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
+    "serve:a11y": "yarn serve coverage",
+    "generate": "yarn build:sass && yarn copy:sass",
+    "build:sass": "node buildSass.js",
+    "copy:sass": "shx mkdir -p dist/sass && shx cp -r sass/react-catalog-view-extension/* dist/sass"
+  },
+  "repository": "git+https://github.com/patternfly/react-catalog-view.git",
+  "author": "Red Hat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patternfly/react-catalog-view/issues"
+  },
+  "homepage": "https://github.com/patternfly/react-catalog-view#readme",
+  "release": {
+    "branches": "main"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "keywords": [
+    "react",
+    "patternfly"
+  ],
+  "dependencies": {
+    "@patternfly/patternfly": "4.221.3",
+    "@patternfly/react-core": "^4.265.0",
+    "@patternfly/react-styles": "^4.92.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17 || ^18",
+    "react-dom": "^16.8 || ^17 || ^18"
+  },
+  "devDependencies": {
+    "@patternfly/documentation-framework": "^1.2.55",
+    "@patternfly/react-table": "^4.111.4",
+    "@patternfly/react-code-editor": "^4.82.26",
+    "rimraf": "^2.6.2",
+    "sass": "^1.42.1",
+    "shx": "^0.3.2",
+    "tslib": "^2.0.0",
+    "typescript": "^4.7.4",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@patternfly/patternfly-a11y": "4.3.1"
+  }
+}
