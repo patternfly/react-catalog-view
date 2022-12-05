@@ -1,5 +1,5 @@
 {
-  "name": "@patternfly/react-catalog-view-extension-root",
+  "name": "@ausuliv/react-catalog-view-extension-root",
   "private": true,
   "version": "0.0.0",
   "description": "This library provides patternfly extensions",
@@ -8,18 +8,18 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspace @patternfly/react-catalog-view-extension build",
-    "build:docs": "yarn workspace @patternfly/react-catalog-view-extension docs:build",
-    "start": "yarn build && concurrently --kill-others \"yarn workspace @patternfly/react-catalog-view-extension docs:develop\"",
-    "serve:docs": "yarn workspace @patternfly/react-catalog-view-extension docs:serve",
-    "clean": "yarn workspace @patternfly/react-catalog-view-extension clean",
+    "build": "yarn workspace @ausuliv/react-catalog-view-extension build",
+    "build:docs": "yarn workspace @ausuliv/react-catalog-view-extension docs:build",
+    "start": "yarn build && concurrently --kill-others \"yarn workspace @ausuliv/react-catalog-view-extension docs:develop\"",
+    "serve:docs": "yarn workspace @ausuliv/react-catalog-view-extension docs:serve",
+    "clean": "yarn workspace @ausuliv/react-catalog-view-extension clean",
     "lint:js": "node --max-old-space-size=4096 node_modules/.bin/eslint packages --ext js,jsx,ts,tsx --cache",
     "lint:md": "yarn eslint packages --ext md --no-eslintrc --config .eslintrc-md.json --cache",
     "lint": "yarn lint:js && yarn lint:md",
     "test": "TZ=EST jest packages",
-    "test:a11y": "yarn workspace @patternfly/react-catalog-view-extension test:a11y",
-    "serve:a11y": "yarn workspace @patternfly/react-catalog-view-extension serve:a11y",
-    "generate": "yarn workspace @patternfly/react-catalog-view-extension generate"
+    "test:a11y": "yarn workspace @ausuliv/react-catalog-view-extension test:a11y",
+    "serve:a11y": "yarn workspace @ausuliv/react-catalog-view-extension serve:a11y",
+    "generate": "yarn workspace @ausuliv/react-catalog-view-extension generate"
   },
   "devDependencies": {
     "react": "^18",

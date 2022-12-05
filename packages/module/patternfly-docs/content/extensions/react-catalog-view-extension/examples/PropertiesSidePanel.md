@@ -5,14 +5,14 @@ source: react
 propComponents: ['PropertiesSidePanel', 'PropertyItem']
 ---
 
-import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';
+import { PropertiesSidePanel, PropertyItem } from '@ausuliv/react-catalog-view-extension';
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
 import './propertiesSidePanel.css';
 
 ## Introduction
-Note: PropertiesSidePanel lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
+Note: PropertiesSidePanel lives in its own package at [`@ausuliv/react-catalog-view-extension`](https://www.npmjs.com/package/@ausuliv/react-catalog-view-extension)!
 
 This package is currently an extension. Extension components do not undergo the same rigorous design or coding review process as core PatternFly components. If enough members of the community find them useful, we will work to move them into our core PatternFly system by starting the design process for the idea.
 
@@ -22,7 +22,7 @@ This package is currently an extension. Extension components do not undergo the 
 ### Properties side panel with property items
 ```js
 import React from 'react';
-import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';
+import { PropertiesSidePanel, PropertyItem } from '@ausuliv/react-catalog-view-extension';
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
