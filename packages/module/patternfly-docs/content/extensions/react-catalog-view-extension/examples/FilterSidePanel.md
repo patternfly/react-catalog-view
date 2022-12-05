@@ -1,10 +1,11 @@
 ---
 id: Catalog view filter side panel
 section: extensions
+source: react
 propComponents: ['FilterSidePanel', 'FilterSidePanelCategory', 'FilterSidePanelCategoryItem']
 ---
 
-import { FilterSidePanel, FilterSidePanelCategory, FilterSidePanelCategoryItem } from '@patternfly/react-catalog-view-extension';
+import { FilterSidePanel, FilterSidePanelCategory, FilterSidePanelCategoryItem } from '@ausuliv/react-catalog-view-extension';
 import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
 import CcPaypalIcon from '@patternfly/react-icons/dist/esm/icons/cc-paypal-icon';
 import CcAmexIcon from '@patternfly/react-icons/dist/esm/icons/cc-amex-icon';
@@ -16,7 +17,7 @@ import CcDinersClubIcon from '@patternfly/react-icons/dist/esm/icons/cc-diners-c
 import './filterSidePanel.css';
 
 ## Introduction
-Note: FilterSidePanel lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
+Note: FilterSidePanel lives in its own package at [`@ausuliv/react-catalog-view-extension`](https://www.npmjs.com/package/@ausuliv/react-catalog-view-extension)!
 
 Note: the width, border, and top padding styling are not part of the FilterSidePanel.
 
@@ -28,7 +29,7 @@ This package is currently an extension. Extension components do not undergo the 
 ### Basic
 ```js
 import React from 'react';
-import { FilterSidePanel, FilterSidePanelCategory, FilterSidePanelCategoryItem } from '@patternfly/react-catalog-view-extension';
+import { FilterSidePanel, FilterSidePanelCategory, FilterSidePanelCategoryItem } from '@ausuliv/react-catalog-view-extension';
 import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
 import CcPaypalIcon from '@patternfly/react-icons/dist/esm/icons/cc-paypal-icon';
 import CcAmexIcon from '@patternfly/react-icons/dist/esm/icons/cc-amex-icon';

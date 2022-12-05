@@ -5,9 +5,9 @@ import '../../../content/extensions/react-catalog-view-extension/examples/./vert
 const pageData = {
   "id": "Catalog view vertical tabs",
   "section": "extensions",
-  "source": "extensions",
-  "slug": "/extensions/catalog-view-vertical-tabs/extensions",
-  "sourceLink": "https://github.com/patternfly/patternfly-org/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/VerticalTabs.md",
+  "source": "react",
+  "slug": "/extensions/catalog-view-vertical-tabs/react",
+  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/VerticalTabs.md",
   "propComponents": [
     {
       "name": "VerticalTabs",
@@ -145,7 +145,7 @@ const Component = () => (
     {React.createElement(pageData.examples["Basic"])}
   </React.Fragment>
 );
-Component.displayName = 'ExtensionsCatalogViewVerticalTabsExtensionsDocs';
+Component.displayName = 'ExtensionsCatalogViewVerticalTabsReactDocs';
 Component.pageData = pageData;
 
 export default Component;
