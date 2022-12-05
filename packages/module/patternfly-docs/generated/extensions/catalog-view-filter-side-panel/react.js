@@ -12,9 +12,9 @@ import '../../../content/extensions/react-catalog-view-extension/examples/./filt
 const pageData = {
   "id": "Catalog view filter side panel",
   "section": "extensions",
-  "source": "extensions",
-  "slug": "/extensions/catalog-view-filter-side-panel/extensions",
-  "sourceLink": "https://github.com/patternfly/patternfly-org/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/FilterSidePanel.md",
+  "source": "react",
+  "slug": "/extensions/catalog-view-filter-side-panel/react",
+  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/FilterSidePanel.md",
   "propComponents": [
     {
       "name": "FilterSidePanel",
@@ -195,7 +195,7 @@ const Component = () => (
     {React.createElement(pageData.examples["Basic"])}
   </React.Fragment>
 );
-Component.displayName = 'ExtensionsCatalogViewFilterSidePanelExtensionsDocs';
+Component.displayName = 'ExtensionsCatalogViewFilterSidePanelReactDocs';
 Component.pageData = pageData;
 
 export default Component;

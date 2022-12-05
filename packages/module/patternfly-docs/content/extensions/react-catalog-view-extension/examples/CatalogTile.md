@@ -1,6 +1,7 @@
 ---
 id: Catalog view tile
 section: extensions
+source: react
 propComponents: ['CatalogTile']
 ---
 
@@ -26,7 +27,7 @@ import pfLogo2 from './pfLogo2.svg';
 import '../../../../dist/css/react-catalog-view-extension.css';
 
 <CatalogTile
-  id="simple"
+  id="simple-tile"
   featured
   iconImg={pfLogo2}
   iconAlt="PatternFly logo"
@@ -85,7 +86,7 @@ import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo2 from './pfLogo2.svg';
 
 <CatalogTile
-  id="link-variant"
+  id="simple-link-variant"
   iconImg={pfLogo2}
   iconAlt="PatternFly logo"
   badges={[
@@ -125,7 +126,7 @@ import pfLogo2 from './pfLogo2.svg';
     </CatalogTileBadge>
   ]}
   title="Patternfly-React"
-  vendor={<React.Fragment>provided by <a href="http://redhat.com">Red Hat</a></React.Fragment>}
+  vendor="provided by Red Hat"
   description={
     'This is a very, very long description that should be truncated after three lines. ' +
     'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +
@@ -148,7 +149,7 @@ import pfLogo2 from './pfLogo2.svg';
     'Community'
   ]}
   title="Patternfly-React"
-  vendor={<React.Fragment>provided by <a href="http://redhat.com">Red Hat</a></React.Fragment>}
+  vendor="provided by Red Hat"
   description={
     'This is a very, very long description that should be truncated after three lines. ' +
     'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +
@@ -165,7 +166,7 @@ import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo2 from './pfLogo2.svg';
 
 <CatalogTile
-  id="simple"
+  id="simple-with-children"
   featured
   iconImg={pfLogo2}
   iconAlt="PatternFly logo"

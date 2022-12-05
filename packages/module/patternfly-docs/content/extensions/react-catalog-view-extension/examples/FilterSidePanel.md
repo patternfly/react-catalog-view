@@ -1,6 +1,7 @@
 ---
 id: Catalog view filter side panel
 section: extensions
+source: react
 propComponents: ['FilterSidePanel', 'FilterSidePanelCategory', 'FilterSidePanelCategoryItem']
 ---
 

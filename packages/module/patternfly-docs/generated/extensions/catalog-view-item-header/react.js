@@ -4,11 +4,11 @@ import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
 import pfLogo2 from '../../../content/extensions/react-catalog-view-extension/examples/./pfLogo2.svg';
 import '../../../content/extensions/react-catalog-view-extension/examples/./catalogItemHeader.css';
 const pageData = {
-  "id": "Catalog view",
+  "id": "Catalog view item header",
   "section": "extensions",
-  "source": "Catalog view item header",
-  "slug": "/extensions/catalog-view/Catalog view item header",
-  "sourceLink": "https://github.com/patternfly/patternfly-org/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/CatalogItemHeader.md",
+  "source": "react",
+  "slug": "/extensions/catalog-view-item-header/react",
+  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/CatalogItemHeader.md",
   "propComponents": [
     {
       "name": "CatalogItemHeader",
@@ -94,7 +94,7 @@ const Component = () => (
     {React.createElement(pageData.examples["With vendor description"])}
   </React.Fragment>
 );
-Component.displayName = 'ExtensionsCatalogViewCatalog view item headerDocs';
+Component.displayName = 'ExtensionsCatalogViewItemHeaderReactDocs';
 Component.pageData = pageData;
 
 export default Component;

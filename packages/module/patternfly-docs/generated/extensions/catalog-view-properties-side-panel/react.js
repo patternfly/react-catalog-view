@@ -8,9 +8,9 @@ import '../../../content/extensions/react-catalog-view-extension/examples/./prop
 const pageData = {
   "id": "Catalog view properties side panel",
   "section": "extensions",
-  "source": "extensions",
-  "slug": "/extensions/catalog-view-properties-side-panel/extensions",
-  "sourceLink": "https://github.com/patternfly/patternfly-org/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/PropertiesSidePanel.md",
+  "source": "react",
+  "slug": "/extensions/catalog-view-properties-side-panel/react",
+  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/PropertiesSidePanel.md",
   "propComponents": [
     {
       "name": "PropertiesSidePanel",
@@ -99,7 +99,7 @@ const Component = () => (
     {React.createElement(pageData.examples["Properties side panel with property items"])}
   </React.Fragment>
 );
-Component.displayName = 'ExtensionsCatalogViewPropertiesSidePanelExtensionsDocs';
+Component.displayName = 'ExtensionsCatalogViewPropertiesSidePanelReactDocs';
 Component.pageData = pageData;
 
 export default Component;

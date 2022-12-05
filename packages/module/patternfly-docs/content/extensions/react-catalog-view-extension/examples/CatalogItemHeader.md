@@ -1,6 +1,7 @@
 ---
 id: Catalog view item header
 section: extensions
+source: react
 propComponents: ['CatalogItemHeader']
 ---
 

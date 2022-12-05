@@ -1,6 +1,7 @@
 ---
 id: Catalog view vertical tabs
 section: extensions
+source: react
 propComponents: ['VerticalTabs', 'VerticalTabsTab']
 ---
 
