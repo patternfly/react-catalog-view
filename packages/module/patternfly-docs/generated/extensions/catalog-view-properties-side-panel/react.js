@@ -1,16 +1,16 @@
 import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@patternfly/documentation-framework/components';
-import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';
+import { PropertiesSidePanel, PropertyItem } from '@ausuliv/react-catalog-view-extension';
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
-import '../../../content/extensions/react-catalog-view-extension/examples/./propertiesSidePanel.css';
+import '../../../content/examples/./propertiesSidePanel.css';
 const pageData = {
   "id": "Catalog view properties side panel",
   "section": "extensions",
   "source": "react",
   "slug": "/extensions/catalog-view-properties-side-panel/react",
-  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/PropertiesSidePanel.md",
+  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/examples/PropertiesSidePanel.md",
   "propComponents": [
     {
       "name": "PropertiesSidePanel",
@@ -71,7 +71,7 @@ pageData.relativeImports = {
 };
 pageData.examples = {
   'Properties side panel with property items': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';\nimport OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';\nimport ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';\nimport GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';\n\nconst PropertiesSidePanelWithPropertyItems = () => (\n  <div style={{ display: 'inline-block', padding: '15px', border: '1px solid grey' }}>\n    <PropertiesSidePanel>\n      <PropertyItem label=\"Operator Version\" value=\"0.9.8 (latest)\" />\n      <PropertyItem\n        label=\"Certified Level\"\n        value={\n          <span>\n            <OkIcon style={{color: 'var(--pf-global--success-color--100)'}} /> Certified\n          </span>\n        }\n      />\n      <PropertyItem label=\"Provider\" value=\"Red Hat, Inc\" />\n      <PropertyItem label=\"Health Index\" value=\"A\" />\n      <PropertyItem\n        label=\"Repository\"\n        value={\n          <a href=\"https://quay.io/repository/redhat/prometheus-operator\">\n            https://quay.io/repository/redhat/prometheus-operator\n          </a>\n        }\n      />\n      <PropertyItem\n        label=\"Container Image\"\n        value={\n          <a href=\"#\">\n            0.22.2 <ExternalLinkAltIcon />\n          </a>\n        }\n      />\n      <PropertyItem\n        label=\"Created At\"\n        value={\n          <span>\n            <GlobeIcon /> Aug 23, 1:58pm\n          </span>\n        }\n      />\n      <PropertyItem label=\"Support\" value={<a href=\"#\">Red Hat</a>} />\n    </PropertiesSidePanel>\n  </div>\n)","title":"Properties side panel with property items","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { PropertiesSidePanel, PropertyItem } from '@ausuliv/react-catalog-view-extension';\nimport OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';\nimport ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';\nimport GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';\n\nconst PropertiesSidePanelWithPropertyItems = () => (\n  <div style={{ display: 'inline-block', padding: '15px', border: '1px solid grey' }}>\n    <PropertiesSidePanel>\n      <PropertyItem label=\"Operator Version\" value=\"0.9.8 (latest)\" />\n      <PropertyItem\n        label=\"Certified Level\"\n        value={\n          <span>\n            <OkIcon style={{color: 'var(--pf-global--success-color--100)'}} /> Certified\n          </span>\n        }\n      />\n      <PropertyItem label=\"Provider\" value=\"Red Hat, Inc\" />\n      <PropertyItem label=\"Health Index\" value=\"A\" />\n      <PropertyItem\n        label=\"Repository\"\n        value={\n          <a href=\"https://quay.io/repository/redhat/prometheus-operator\">\n            https://quay.io/repository/redhat/prometheus-operator\n          </a>\n        }\n      />\n      <PropertyItem\n        label=\"Container Image\"\n        value={\n          <a href=\"#\">\n            0.22.2 <ExternalLinkAltIcon />\n          </a>\n        }\n      />\n      <PropertyItem\n        label=\"Created At\"\n        value={\n          <span>\n            <GlobeIcon /> Aug 23, 1:58pm\n          </span>\n        }\n      />\n      <PropertyItem label=\"Support\" value={<a href=\"#\">Red Hat</a>} />\n    </PropertiesSidePanel>\n  </div>\n)","title":"Properties side panel with property items","lang":"js"}}>
       
     </Example>
 };
@@ -83,9 +83,9 @@ const Component = () => (
     </AutoLinkHeader>
     <p {...{"className":"ws-p"}}>
       {`Note: PropertiesSidePanel lives in its own package at `}
-      <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@patternfly/react-catalog-view-extension"}}>
+      <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@ausuliv/react-catalog-view-extension"}}>
         <code {...{"className":"ws-code"}}>
-          {`@patternfly/react-catalog-view-extension`}
+          {`@ausuliv/react-catalog-view-extension`}
         </code>
       </PatternflyThemeLink>
       {`!`}

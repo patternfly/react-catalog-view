@@ -1,14 +1,14 @@
 import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@patternfly/documentation-framework/components';
-import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
-import pfLogo2 from '../../../content/extensions/react-catalog-view-extension/examples/./pfLogo2.svg';
-import '../../../content/extensions/react-catalog-view-extension/examples/./catalogItemHeader.css';
+import { CatalogItemHeader } from '@ausuliv/react-catalog-view-extension';
+import pfLogo2 from '../../../content/examples/./pfLogo2.svg';
+import '../../../content/examples/./catalogItemHeader.css';
 const pageData = {
   "id": "Catalog view item header",
   "section": "extensions",
   "source": "react",
   "slug": "/extensions/catalog-view-item-header/react",
-  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/extensions/react-catalog-view-extension/examples/CatalogItemHeader.md",
+  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/examples/CatalogItemHeader.md",
   "propComponents": [
     {
       "name": "CatalogItemHeader",
@@ -61,11 +61,11 @@ pageData.relativeImports = {
 };
 pageData.examples = {
   'Basic': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo2 from './examples/pfLogo2.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo2}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@ausuliv/react-catalog-view-extension';\nimport pfLogo2 from './examples/pfLogo2.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo2}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js"}}>
       
     </Example>,
   'With vendor description': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo2 from './examples/pfLogo2.svg';\n\nconst WithVendorDescription = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo2}\n    title=\"Patternfly-React\"\n    vendor={\n      <span>\n        provided by <a href=\"http://redhat.com\">Red Hat</a>\n      </span>\n    }\n  />\n)","title":"With vendor description","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@ausuliv/react-catalog-view-extension';\nimport pfLogo2 from './examples/pfLogo2.svg';\n\nconst WithVendorDescription = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo2}\n    title=\"Patternfly-React\"\n    vendor={\n      <span>\n        provided by <a href=\"http://redhat.com\">Red Hat</a>\n      </span>\n    }\n  />\n)","title":"With vendor description","lang":"js"}}>
       
     </Example>
 };
@@ -77,9 +77,9 @@ const Component = () => (
     </AutoLinkHeader>
     <p {...{"className":"ws-p"}}>
       {`Note: Catalog item header lives in its own package at `}
-      <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@patternfly/react-catalog-view-extension"}}>
+      <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@ausuliv/react-catalog-view-extension"}}>
         <code {...{"className":"ws-code"}}>
-          {`@patternfly/react-catalog-view-extension`}
+          {`@ausuliv/react-catalog-view-extension`}
         </code>
       </PatternflyThemeLink>
       {`!`}
