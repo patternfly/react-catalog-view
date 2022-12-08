@@ -1,6 +1,7 @@
 ---
-id: Catalog view tile
+id: Catalog tile
 section: extensions
+subsection: Catalog view
 source: react
 propComponents: ['CatalogTile']
 ---

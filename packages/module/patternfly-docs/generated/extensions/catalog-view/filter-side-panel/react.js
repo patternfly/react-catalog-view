@@ -8,13 +8,13 @@ import CcDiscoverIcon from '@patternfly/react-icons/dist/esm/icons/cc-discover-i
 import CcVisaIcon from '@patternfly/react-icons/dist/esm/icons/cc-visa-icon';
 import CcMastercardIcon from '@patternfly/react-icons/dist/esm/icons/cc-mastercard-icon';
 import CcDinersClubIcon from '@patternfly/react-icons/dist/esm/icons/cc-diners-club-icon';
-import '../../../content/examples/./filterSidePanel.css';
+import '../../../../content/examples/./filterSidePanel.css';
 const pageData = {
-  "id": "Catalog view filter side panel",
+  "id": "Filter side panel",
   "section": "extensions",
-  "subsection": "",
+  "subsection": "Catalog view",
   "source": "react",
-  "slug": "/extensions/catalog-view-filter-side-panel/react",
+  "slug": "/extensions/catalog-view/filter-side-panel/react",
   "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/examples/FilterSidePanel.md",
   "propComponents": [
     {
