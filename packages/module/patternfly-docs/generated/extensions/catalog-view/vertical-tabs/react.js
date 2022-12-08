@@ -1,13 +1,13 @@
 import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@patternfly/documentation-framework/components';
 import { VerticalTabs, VerticalTabsTab } from '@ausuliv/react-catalog-view-extension';
-import '../../../content/examples/./verticalTab.css';
+import '../../../../content/examples/./verticalTab.css';
 const pageData = {
-  "id": "Catalog view vertical tabs",
+  "id": "Vertical tabs",
   "section": "extensions",
-  "subsection": "",
+  "subsection": "Catalog view",
   "source": "react",
-  "slug": "/extensions/catalog-view-vertical-tabs/react",
+  "slug": "/extensions/catalog-view/vertical-tabs/react",
   "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/examples/VerticalTabs.md",
   "propComponents": [
     {

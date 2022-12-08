@@ -4,13 +4,13 @@ import { PropertiesSidePanel, PropertyItem } from '@ausuliv/react-catalog-view-e
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
-import '../../../content/examples/./propertiesSidePanel.css';
+import '../../../../content/examples/./propertiesSidePanel.css';
 const pageData = {
-  "id": "Catalog view properties side panel",
+  "id": "Properties side panel",
   "section": "extensions",
-  "subsection": "",
+  "subsection": "Catalog view",
   "source": "react",
-  "slug": "/extensions/catalog-view-properties-side-panel/react",
+  "slug": "/extensions/catalog-view/properties-side-panel/react",
   "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/examples/PropertiesSidePanel.md",
   "propComponents": [
     {

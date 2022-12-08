@@ -1,6 +1,7 @@
 ---
-id: Catalog view properties side panel
+id: Properties side panel
 section: extensions
+subsection: Catalog view
 source: react
 propComponents: ['PropertiesSidePanel', 'PropertyItem']
 ---
