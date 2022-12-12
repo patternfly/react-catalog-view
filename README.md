@@ -4,6 +4,8 @@ This package contains catalog components based on the ones in PF3's patternfly-r
 
 This package is currently an extension. Extension components do not undergo the same rigorous design or coding review process as core PatternFly components. If enough members of the community find them useful, we will work to move them into our core PatternFly system by starting the design process for the idea.
 
+Development for this extension was previously being done under the [patternfly-react repo](https://github.com/patternfly/patternfly-react/tree/caf893d71966a0eabcde909a29d9a872367d9897/packages/react-catalog-view-extension).
+
 ### Installing
 
 ```
@@ -52,4 +54,3 @@ yarn test
 ```
 yarn publish
 ```
-
