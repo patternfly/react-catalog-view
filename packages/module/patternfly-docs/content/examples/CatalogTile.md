@@ -6,7 +6,7 @@ source: react
 propComponents: ['CatalogTile']
 ---
 
-import { CatalogTile, CatalogTileBadge } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
 import pfLogo2 from './pfLogo2.svg';
@@ -14,7 +14,7 @@ import './catalogTile.css';
 
 ## Introduction
 
-Note: Catalog tile lives in its own package at [`@ausuliv/react-catalog-view-extension`](https://www.npmjs.com/package/@ausuliv/react-catalog-view-extension)!
+Note: Catalog tile lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
 
 This package is currently an extension. Extension components do not undergo the same rigorous design or coding review process as core PatternFly components. If enough members of the community find them useful, we will work to move them into our core PatternFly system by starting the design process for the idea.
 
@@ -22,7 +22,7 @@ This package is currently an extension. Extension components do not undergo the 
 ### Basic featured tile
 ```js
 import React from 'react';
-import { CatalogTile, CatalogTileBadge } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo2 from './pfLogo2.svg';
 import '../../../../dist/css/react-catalog-view-extension.css';
@@ -50,7 +50,7 @@ import '../../../../dist/css/react-catalog-view-extension.css';
 ### Basic with footer
 ```js
 import React from 'react';
-import { CatalogTile, CatalogTileBadge } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
 import pfLogo2 from './pfLogo2.svg';
@@ -82,7 +82,7 @@ import pfLogo2 from './pfLogo2.svg';
 ### Link variant
 ```js
 import React from 'react';
-import { CatalogTile, CatalogTileBadge } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo2 from './pfLogo2.svg';
 
@@ -109,7 +109,7 @@ import pfLogo2 from './pfLogo2.svg';
 ### With multiple icon badges
 ```js
 import React from 'react';
-import { CatalogTile, CatalogTileBadge } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
 import pfLogo2 from './pfLogo2.svg';
@@ -139,7 +139,7 @@ import pfLogo2 from './pfLogo2.svg';
 ### With text badge
 ```js
 import React from 'react';
-import { CatalogTile } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile } from '@patternfly/react-catalog-view-extension';
 import pfLogo2 from './pfLogo2.svg';
 
 <CatalogTile
@@ -162,7 +162,7 @@ import pfLogo2 from './pfLogo2.svg';
 ### With children instead of description
 ```js
 import React from 'react';
-import { CatalogTile, CatalogTileBadge } from '@ausuliv/react-catalog-view-extension';
+import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo2 from './pfLogo2.svg';
 
