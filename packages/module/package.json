@@ -32,9 +32,6 @@
     "url": "https://github.com/patternfly/react-catalog-view/issues"
   },
   "homepage": "https://github.com/patternfly/react-catalog-view#readme",
-  "release": {
-    "branches": "main"
-  },
   "publishConfig": {
     "access": "public",
     "tag": "prerelease"
