@@ -19,7 +19,8 @@
     "test": "TZ=EST jest packages",
     "test:a11y": "yarn workspace @patternfly/react-catalog-view-extension test:a11y",
     "serve:a11y": "yarn workspace @patternfly/react-catalog-view-extension serve:a11y",
-    "generate": "yarn workspace @patternfly/react-catalog-view-extension generate"
+    "generate": "yarn workspace @patternfly/react-catalog-view-extension generate",
+    "update": "node scripts/importUpdatesFromOldRepo.js"
   },
   "devDependencies": {
     "react": "^18",
