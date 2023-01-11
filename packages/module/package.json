@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@patternfly/patternfly": "4.222.4",
-    "@patternfly/react-core": "^4.267.6",
+    "@patternfly/react-core": "^4.268.0",
     "@patternfly/react-styles": "^4.92.3"
   },
   "peerDependencies": {
