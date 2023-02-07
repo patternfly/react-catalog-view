@@ -25,7 +25,10 @@
     "build:sass": "node buildSass.js",
     "copy:sass": "shx mkdir -p dist/sass && shx cp -r sass/react-catalog-view-extension/* dist/sass"
   },
-  "repository": "git+https://github.com/patternfly/react-catalog-view.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patternfly/react-catalog-view.git"
+  },
   "author": "Red Hat",
   "license": "MIT",
   "bugs": {
