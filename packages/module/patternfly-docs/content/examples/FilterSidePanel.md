@@ -4,6 +4,7 @@ section: extensions
 subsection: Catalog view
 source: react
 propComponents: ['FilterSidePanel', 'FilterSidePanelCategory', 'FilterSidePanelCategoryItem']
+sourceLink: https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/FilterSidePanel/FilterSidePanel.tsx
 ---
 
 import { FilterSidePanel, FilterSidePanelCategory, FilterSidePanelCategoryItem } from '@patternfly/react-catalog-view-extension';
@@ -21,9 +22,6 @@ import './filterSidePanel.css';
 Note: FilterSidePanel lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
 
 Note: the width, border, and top padding styling are not part of the FilterSidePanel.
-
-This package is currently an extension. Extension components do not undergo the same rigorous design or coding review process as core PatternFly components. If enough members of the community find them useful, we will work to move them into our core PatternFly system by starting the design process for the idea.
-
 
 ## Examples
 
