@@ -7,6 +7,7 @@ module.exports = {
     section: "extensions",
     subsection: "Catalog view",
     source: "react",
+    tabName: null,
     Component: () => import(/* webpackChunkName: "extensions/catalog-view/catalog-item-header/react/index" */ './extensions/catalog-view/catalog-item-header/react')
   },
   '/extensions/catalog-view/catalog-tile/react': {
@@ -17,6 +18,7 @@ module.exports = {
     section: "extensions",
     subsection: "Catalog view",
     source: "react",
+    tabName: null,
     Component: () => import(/* webpackChunkName: "extensions/catalog-view/catalog-tile/react/index" */ './extensions/catalog-view/catalog-tile/react')
   },
   '/extensions/catalog-view/filter-side-panel/react': {
@@ -27,6 +29,7 @@ module.exports = {
     section: "extensions",
     subsection: "Catalog view",
     source: "react",
+    tabName: null,
     Component: () => import(/* webpackChunkName: "extensions/catalog-view/filter-side-panel/react/index" */ './extensions/catalog-view/filter-side-panel/react')
   },
   '/extensions/catalog-view/properties-side-panel/react': {
@@ -37,6 +40,7 @@ module.exports = {
     section: "extensions",
     subsection: "Catalog view",
     source: "react",
+    tabName: null,
     Component: () => import(/* webpackChunkName: "extensions/catalog-view/properties-side-panel/react/index" */ './extensions/catalog-view/properties-side-panel/react')
   },
   '/extensions/catalog-view/vertical-tabs/react': {
@@ -47,6 +51,7 @@ module.exports = {
     section: "extensions",
     subsection: "Catalog view",
     source: "react",
+    tabName: null,
     Component: () => import(/* webpackChunkName: "extensions/catalog-view/vertical-tabs/react/index" */ './extensions/catalog-view/vertical-tabs/react')
   }
 };

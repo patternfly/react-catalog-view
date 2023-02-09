@@ -10,8 +10,10 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "source": "react",
+  "tabName": null,
   "slug": "/extensions/catalog-view/catalog-tile/react",
-  "sourceLink": "https://github.com/patternfly/patternfly-react/blob/main/packages/module/patternfly-docs/content/examples/CatalogTile.md",
+  "sourceLink": "https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/CatalogTile/CatalogTile.tsx",
+  "relPath": "packages/module/patternfly-docs/content/examples/CatalogTile.md",
   "propComponents": [
     {
       "name": "CatalogTile",
@@ -169,9 +171,6 @@ const Component = () => (
         </code>
       </PatternflyThemeLink>
       {`!`}
-    </p>
-    <p {...{"className":"ws-p"}}>
-      {`This package is currently an extension. Extension components do not undergo the same rigorous design or coding review process as core PatternFly components. If enough members of the community find them useful, we will work to move them into our core PatternFly system by starting the design process for the idea.`}
     </p>
     <AutoLinkHeader {...{"id":"examples","size":"h2","className":"ws-title ws-h2"}}>
       {`Examples`}

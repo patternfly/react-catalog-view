@@ -4,6 +4,7 @@ section: extensions
 subsection: Catalog view
 source: react
 propComponents: ['CatalogTile']
+sourceLink: https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/CatalogTile/CatalogTile.tsx
 ---
 
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
@@ -15,8 +16,6 @@ import './catalogTile.css';
 ## Introduction
 
 Note: Catalog tile lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
-
-This package is currently an extension. Extension components do not undergo the same rigorous design or coding review process as core PatternFly components. If enough members of the community find them useful, we will work to move them into our core PatternFly system by starting the design process for the idea.
 
 ## Examples
 ### Basic featured tile
