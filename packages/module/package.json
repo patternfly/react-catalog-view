@@ -44,7 +44,6 @@
     "patternfly"
   ],
   "dependencies": {
-    "@patternfly/patternfly": "^4.224.2",
     "@patternfly/react-core": "^4.276.6",
     "@patternfly/react-styles": "^4.92.6"
   },
@@ -53,6 +52,7 @@
     "react-dom": "^16.8 || ^17 || ^18"
   },
   "devDependencies": {
+    "@patternfly/patternfly": "^4.224.2",
     "@patternfly/documentation-framework": "^1.8.0",
     "@patternfly/react-table": "^4.112.39",
     "@patternfly/react-code-editor": "^4.82.113",
@@ -60,9 +60,6 @@
     "sass": "^1.42.1",
     "shx": "^0.3.2",
     "tslib": "^2.0.0",
-    "typescript": "^4.7.4",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "@patternfly/patternfly-a11y": "^4.3.1"
   }
 }
