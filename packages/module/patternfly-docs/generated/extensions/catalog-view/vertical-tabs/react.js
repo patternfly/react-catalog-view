@@ -7,7 +7,6 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "source": "react",
-  "tabName": null,
   "slug": "/extensions/catalog-view/vertical-tabs/react",
   "sourceLink": "https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/VerticalTabs/VerticalTabs.tsx",
   "relPath": "packages/module/patternfly-docs/content/examples/VerticalTabs.md",

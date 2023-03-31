@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, CardActions, CardHeader, CardTitle, CardBody, CardFooter } from '@patternfly/react-core';
+import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 
 export interface CatalogTileProps extends Omit<React.HTMLProps<HTMLElement>, 'title'> {
@@ -112,10 +112,9 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
         {...props}
       >
         {(badges.length > 0 || iconImg || iconClass || icon) && (
-          <CardHeader>
+          <CardHeader actions={{ actions: badges.length > 0 && this.renderBadges(badges)}}>
             {iconImg && <img className="catalog-tile-pf-icon" src={iconImg} alt={iconAlt} />}
             {!iconImg && (iconClass || icon) && <span className={`catalog-tile-pf-icon ${iconClass}`}>{icon}</span>}
-            {badges.length > 0 && <CardActions>{this.renderBadges(badges)}</CardActions>}
           </CardHeader>
         )}
         <CardTitle className="catalog-tile-pf-header">
