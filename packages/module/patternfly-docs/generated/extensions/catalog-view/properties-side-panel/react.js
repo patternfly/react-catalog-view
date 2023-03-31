@@ -10,7 +10,6 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "source": "react",
-  "tabName": null,
   "slug": "/extensions/catalog-view/properties-side-panel/react",
   "sourceLink": "https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/PropertiesSidePanel/PropertiesSidePanel.tsx",
   "relPath": "packages/module/patternfly-docs/content/examples/PropertiesSidePanel.md",

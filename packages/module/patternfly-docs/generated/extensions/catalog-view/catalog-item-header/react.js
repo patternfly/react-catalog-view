@@ -8,7 +8,6 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "source": "react",
-  "tabName": null,
   "slug": "/extensions/catalog-view/catalog-item-header/react",
   "sourceLink": "https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/CatalogItemHeader/CatalogItemHeader.tsx",
   "relPath": "packages/module/patternfly-docs/content/examples/CatalogItemHeader.md",
