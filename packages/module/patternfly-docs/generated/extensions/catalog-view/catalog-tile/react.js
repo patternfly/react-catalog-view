@@ -10,6 +10,7 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "source": "react",
+  "tabName": null,
   "slug": "/extensions/catalog-view/catalog-tile/react",
   "sourceLink": "https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/CatalogTile/CatalogTile.tsx",
   "relPath": "packages/module/patternfly-docs/content/examples/CatalogTile.md",
