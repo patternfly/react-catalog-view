@@ -14,6 +14,7 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "source": "react",
+  "tabName": null,
   "slug": "/extensions/catalog-view/filter-side-panel/react",
   "sourceLink": "https://github.com/patternfly/react-catalog-view/tree/main/packages/module/src/components/FilterSidePanel/FilterSidePanel.tsx",
   "relPath": "packages/module/patternfly-docs/content/examples/FilterSidePanel.md",

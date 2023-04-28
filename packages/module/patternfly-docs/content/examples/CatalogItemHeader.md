@@ -38,7 +38,7 @@ import pfLogo2 from './examples/pfLogo2.svg';
   title="Patternfly-React"
   vendor={
     <span>
-      provided by <a href="http://redhat.com">Red Hat</a>
+      provided by <a style={{ textDecoration: 'underline' }}href="http://redhat.com">Red Hat</a>
     </span>
   }
 />
