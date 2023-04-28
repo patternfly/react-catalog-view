@@ -1,19 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":dependencyDashboardApproval"
   ],
+  "enabledManagers": ["npm"],
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "packagePatterns": ["*"],
       "excludePackagePatterns": [
-        "@patternfly/documentation-framework"
+        "@patternfly/*"
       ],
       "enabled": false
     },
     {
-      "packageNames": [
-        "@patternfly/documentation-framework"
+      "datasources": ["npm"],
+      "packagePatterns": [
+        "@patternfly/*"
       ]
     }
   ]
