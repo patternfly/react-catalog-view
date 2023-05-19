@@ -1,7 +1,4 @@
 module.exports = {
-  branches: [
-    '.'
-  ],
   analyzeCommits: {
     preset: 'angular'
   },
