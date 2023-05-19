@@ -4,9 +4,6 @@ module.exports = {
     { name: 'main', channel: 'alpha', prerelease: 'alpha' },
     { name: 'release-test', channel: 'test', prerelease: 'test' },
   ],
-  analyzeCommits: {
-    preset: 'angular'
-  },
   plugins: [
     [
       '@semantic-release/commit-analyzer',
