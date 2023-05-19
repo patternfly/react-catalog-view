@@ -7,5 +7,3 @@ on:
 jobs:
   call-build-lint-test-workflow:
     uses: ./.github/workflows/build-lint-test.yml
-  test-release:
-    uses: './.github/workflows/release-test.yml'
