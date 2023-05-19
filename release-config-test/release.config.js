@@ -27,5 +27,7 @@ module.exports = {
       }
     ]
   ],
-  tagFormat: 'prerelease-v${version}'
+  tagFormat: 'prerelease-v${version}',
+  dryRun: true,
+  ci: false
 };
