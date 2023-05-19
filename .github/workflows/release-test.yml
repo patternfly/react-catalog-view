@@ -23,7 +23,5 @@ jobs:
       - name: Build dist
         run: yarn build
         if: steps.dist.outputs.cache-hit != 'true'
-      - name: ls
-        run: ls
       - name: Release to NPM
         run: cd release-config-test && npx semantic-release@19.0.5

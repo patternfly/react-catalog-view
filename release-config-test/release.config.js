@@ -1,6 +1,6 @@
 module.exports = {
   branches: [
-    { name: 'v4', channel: 'prerelease' },
+    { name: '.', channel: 'prerelease' },
     { name: 'main', channel: 'alpha', prerelease: 'alpha' }
   ],
   analyzeCommits: {
