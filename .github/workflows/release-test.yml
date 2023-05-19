@@ -9,13 +9,8 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          if [[ ! -z "${GH_PR_NUM}" ]]; then 
-            echo "Checking out PR"
-            git fetch origin pull/$GH_PR_NUM/head:tmp
-            git checkout tmp
-          fi
-      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
