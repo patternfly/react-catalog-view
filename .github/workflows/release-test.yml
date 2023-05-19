@@ -2,7 +2,7 @@ name: release
 on:
   workflow_call:
 jobs:
-  deploy:
+  test-deployment:
     runs-on: ubuntu-latest
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -15,17 +15,6 @@ jobs:
         with:
           node-version: '14'
       - uses: actions/cache@v2
-        id: yarn-cache
-        name: Cache npm deps
-        with:
-          path: |
-           node_modules
-           **/node_modules
-           ~/.cache/Cypress
-          key: ${{ runner.os }}-yarn-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-      - uses: actions/cache@v2
         id: dist
         name: Cache dist
         with:
@@ -37,4 +26,5 @@ jobs:
         run: yarn build
         if: steps.dist.outputs.cache-hit != 'true'
       - name: Release to NPM
+        run: ls
         run: cd release-config-test && npx semantic-release@19.0.5
