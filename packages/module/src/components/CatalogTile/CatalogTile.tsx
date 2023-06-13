@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
+import { getUniqueId } from '@patternfly/react-core';
 
 export interface CatalogTileProps extends Omit<React.HTMLProps<HTMLElement>, 'title'> {
   /** Id */
@@ -10,7 +11,7 @@ export interface CatalogTileProps extends Omit<React.HTMLProps<HTMLElement>, 'ti
   /** Flag if the tile is 'featured' */
   featured: boolean;
   /** Callback for a click on the tile */
-  onClick?: (event: React.SyntheticEvent<HTMLElement>) => void;
+  onClick?: (event: React.FormEvent<HTMLInputElement> | React.MouseEvent<Element, MouseEvent>) => void;
   /** href for the tile if used as a link */
   href: string;
   /** URL of an image for the item's icon */
@@ -38,7 +39,7 @@ export interface CatalogTileProps extends Omit<React.HTMLProps<HTMLElement>, 'ti
 export class CatalogTile extends React.Component<CatalogTileProps> {
   static displayName = 'CatalogTile';
   static defaultProps = {
-    id: null as any,
+    id: getUniqueId('pf-catalog-tile'),
     className: '',
     featured: false,
     onClick: null as (event: React.SyntheticEvent<HTMLElement>) => void,
@@ -54,7 +55,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
     children: null as React.ReactNode
   };
 
-  private handleClick = (e: React.SyntheticEvent<HTMLElement>) => {
+  private handleClick = (e: React.FormEvent<HTMLInputElement> | React.MouseEvent<Element, MouseEvent>) => {
     const { onClick, href } = this.props;
 
     if (!href) {
@@ -103,16 +104,20 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
 
     return (
       <Card
-        component={href || onClick ? 'a' : 'div'}
+        component={href ? 'a' : 'div'}
         id={id}
         href={href || '#'}
         className={css('catalog-tile-pf', { featured }, className)}
-        onClick={e => this.handleClick(e)}
-        isSelectable
+        isClickable={!!onClick}
         {...props}
       >
         {(badges.length > 0 || iconImg || iconClass || icon) && (
-          <CardHeader actions={{ actions: badges.length > 0 && this.renderBadges(badges)}}>
+          <CardHeader
+            actions={{ actions: badges.length > 0 && this.renderBadges(badges) }}
+            selectableActions={
+              onClick && { selectableActionId: id + '-input', onClickAction: (e) => this.handleClick(e), selectableActionAriaLabelledby: id }
+            }
+          >
             {iconImg && <img className="catalog-tile-pf-icon" src={iconImg} alt={iconAlt} />}
             {!iconImg && (iconClass || icon) && <span className={`catalog-tile-pf-icon ${iconClass}`}>{icon}</span>}
           </CardHeader>

@@ -1,6 +1,6 @@
 .catalog-tile-pf {
   &.featured {
-    border-top: 2px solid var(--pf-global--active-color--100);
+    border-top: 2px solid var(--pf-v5-global--active-color--100);
   }
 
   &:active,
@@ -11,7 +11,7 @@
     text-decoration: none;
   }
 
-  .pf-c-card__actions {
+  .pf-v5-c-card__actions {
     padding-left: 5px;
   }
 }
@@ -27,7 +27,7 @@
   }
 
   .catalog-tile-pf-subtitle {
-    color: var(--pf-global--Color--200);
+    color: var(--pf-v5-global--Color--200);
     font-size: 13px;
     font-weight: initial;
 

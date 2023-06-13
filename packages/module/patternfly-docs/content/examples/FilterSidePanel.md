@@ -106,7 +106,7 @@ class MockFilterSidePanelExample extends React.Component {
   
       return (
         <span>
-          <span className="pf-u-screen-reader">{`${count} stars`}</span>
+          <span className="pf-v5-u-screen-reader">{`${count} stars`}</span>
           {stars}
         </span>
       );
