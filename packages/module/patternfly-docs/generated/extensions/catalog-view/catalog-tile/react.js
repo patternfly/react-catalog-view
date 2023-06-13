@@ -93,7 +93,7 @@ const pageData = {
           "name": "id",
           "type": "any",
           "description": "Id",
-          "defaultValue": "getUniqueId('pf-catalog-tile-')"
+          "defaultValue": "getUniqueId('pf-catalog-tile')"
         },
         {
           "name": "onClick",

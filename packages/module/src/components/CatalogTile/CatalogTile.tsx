@@ -111,7 +111,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
         isClickable={!!onClick}
         {...props}
       >
-        {(badges.length > 0 || iconImg || iconClass || icon) && (
+        {(badges.length > 0 || iconImg || iconClass || icon || onClick) && (
           <CardHeader
             actions={{ actions: badges.length > 0 && this.renderBadges(badges) }}
             selectableActions={

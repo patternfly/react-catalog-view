@@ -120,6 +120,7 @@ test('CatalogTile onClick behaves properly', async () => {
     />
   );
 
-  await user.click(screen.getByText('Patternfly'));
+  // await user.click(screen.getByText('Patternfly'));
+  await user.click(screen.getByRole('radio'));
   expect(onClickMock).toHaveBeenCalled();
 });
