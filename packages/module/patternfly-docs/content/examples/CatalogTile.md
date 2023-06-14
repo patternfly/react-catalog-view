@@ -72,7 +72,7 @@ import pfLogo2 from './pfLogo2.svg';
   }
   footer={
     <span>
-      <OutlinedCheckCircleIcon style={{color: 'var(--pf-global--success-color--100)'}} /> Enabled
+      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v5-global--success-color--100)'}} /> Enabled
     </span>
   }
 />
@@ -122,7 +122,7 @@ import pfLogo2 from './pfLogo2.svg';
       <CogIcon />
     </CatalogTileBadge>,
     <CatalogTileBadge title="USDA Approved">
-      <OutlinedCheckCircleIcon style={{color: 'var(--pf-global--success-color--100)'}} />
+      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v5-global--success-color--100)'}} />
     </CatalogTileBadge>
   ]}
   title="Patternfly-React"

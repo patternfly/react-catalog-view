@@ -23,7 +23,7 @@
   margin-bottom: 0;
 }
 
-.filter-panel-pf-category-items .pf-c-button.pf-m-link {
+.filter-panel-pf-category-items .pf-v5-c-button.pf-m-link {
   padding: 0;
 }
 
@@ -37,7 +37,7 @@
   margin-top: 0;
 }
 
-.filter-panel-pf-category-item .pf-c-check__input {
+.filter-panel-pf-category-item .pf-v5-c-check__input {
   margin-left: 0px;
 }
 
