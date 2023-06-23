@@ -1,6 +1,6 @@
 {
   "name": "@patternfly/react-catalog-view-extension",
-  "version": "5.0.0-alpha.0",
+  "version": "5.0.0-prerelease.0",
   "description": "This library provides catalog view extensions for PatternFly 4 React.",
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
@@ -33,25 +33,27 @@
   "homepage": "https://github.com/patternfly/react-catalog-view#readme",
   "publishConfig": {
     "access": "public",
-    "tag": "alpha"
+    "tag": "prerelease"
   },
   "keywords": [
     "react",
     "patternfly"
   ],
   "dependencies": {
-    "@patternfly/react-core": "5.0.0-prerelease.7",
-    "@patternfly/react-styles": "5.0.0-prerelease.2"
+    "@patternfly/react-core": "^5.0.0-prerelease.13",
+    "@patternfly/react-styles": "^5.0.0-prerelease.5"
   },
   "peerDependencies": {
-    "react": "^16.8 || ^17 || ^18",
-    "react-dom": "^16.8 || ^17 || ^18"
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18"
   },
   "devDependencies": {
-    "@patternfly/patternfly": "5.0.0-prerelease.6",
-    "@patternfly/documentation-framework": "2.0.0-alpha.57",
-    "@patternfly/react-table": "5.0.0-prerelease.7",
-    "@patternfly/react-code-editor": "5.0.0-prerelease.7",
+    "@patternfly/patternfly": "^5.0.0-prerelease.10",
+    "@patternfly/documentation-framework": "^2.0.0-alpha.73",
+    "@patternfly/react-table": "^5.0.0-prerelease.13",
+    "@patternfly/react-code-editor": "^5.0.0-prerelease.13",
+    "react-monaco-editor": "0.51.0",
+    "monaco-editor": "0.34.1",
     "rimraf": "^2.6.2",
     "sass": "^1.42.1",
     "shx": "^0.3.2",

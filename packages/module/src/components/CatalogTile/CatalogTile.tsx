@@ -37,9 +37,14 @@ export interface CatalogTileProps extends Omit<React.HTMLProps<HTMLElement>, 'ti
 }
 
 export class CatalogTile extends React.Component<CatalogTileProps> {
+  generatedId: string;
+  constructor(props: CatalogTileProps) {
+    super(props);
+    this.generatedId = getUniqueId('pf-catalog-tile');
+  }
   static displayName = 'CatalogTile';
   static defaultProps = {
-    id: getUniqueId('pf-catalog-tile'),
+    id: null as string,
     className: '',
     featured: false,
     onClick: null as (event: React.SyntheticEvent<HTMLElement>) => void,
@@ -105,7 +110,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
     return (
       <Card
         component={href ? 'a' : 'div'}
-        id={id}
+        id={id || this.generatedId}
         href={href || '#'}
         className={css('catalog-tile-pf', { featured }, className)}
         isClickable={!!onClick}
