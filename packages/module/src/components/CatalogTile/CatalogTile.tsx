@@ -120,7 +120,11 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
           <CardHeader
             actions={{ actions: badges.length > 0 && this.renderBadges(badges) }}
             selectableActions={
-              onClick && { selectableActionId: id + '-input', onClickAction: (e) => this.handleClick(e), selectableActionAriaLabelledby: id }
+              onClick && {
+                selectableActionId: id + '-input',
+                onClickAction: (e) => this.handleClick(e),
+                selectableActionAriaLabelledby: id
+              }
             }
           >
             {iconImg && <img className="catalog-tile-pf-icon" src={iconImg} alt={iconAlt} />}
