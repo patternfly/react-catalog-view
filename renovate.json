@@ -1,20 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
+  "enabledManagers": ["npm"],
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "packagePatterns": ["*"],
-      "excludePackagePatterns": [
-        "@patternfly/documentation-framework"
-      ],
+      "excludePackagePatterns": ["@patternfly/*"],
       "enabled": false
     },
     {
-      "packageNames": [
-        "@patternfly/documentation-framework"
-      ]
+      "datasources": ["npm"],
+      "packagePatterns": ["@patternfly/*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "patternfly",
+      "followTag": "latest"
     }
   ]
 }
