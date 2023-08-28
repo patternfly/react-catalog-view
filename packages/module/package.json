@@ -37,7 +37,7 @@
   "homepage": "https://github.com/patternfly/react-catalog-view#readme",
   "publishConfig": {
     "access": "public",
-    "tag": "prerelease"
+    "tag": "prerelease-v4"
   },
   "keywords": [
     "react",
