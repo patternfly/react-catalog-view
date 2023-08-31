@@ -18,6 +18,5 @@ module.exports = {
     '@semantic-release/github',
     '@semantic-release/npm'
   ],
-  tagFormat: 'prerelease-v${version}',
-  druRun: true
+  tagFormat: 'prerelease-v${version}'
 };
