@@ -52,6 +52,7 @@
     "@testing-library/jest-dom":"5.16.5",
     "@testing-library/dom": "9.0.0",
     "jest-environment-jsdom": "^29.2.2",
+    "jest-transform-stub": "^2.0.0",
     "serve": "^14.1.2"
   }
 }
