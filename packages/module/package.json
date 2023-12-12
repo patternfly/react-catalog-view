@@ -1,6 +1,6 @@
 {
   "name": "@patternfly/react-catalog-view-extension",
-  "version": "0.0.0",
+  "version": "6.0.0-alpha.0",
   "description": "This library provides catalog view extensions for PatternFly 4 React.",
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
@@ -33,25 +33,25 @@
   "homepage": "https://github.com/patternfly/react-catalog-view#readme",
   "publishConfig": {
     "access": "public",
-    "tag": "prerelease"
+    "tag": "alpha"
   },
   "keywords": [
     "react",
     "patternfly"
   ],
   "dependencies": {
-    "@patternfly/react-core": "^5.0.0",
-    "@patternfly/react-styles": "^5.0.0"
+    "@patternfly/react-core": "^6.0.0-alpha.2",
+    "@patternfly/react-styles": "6.0.0-alpha.2"
   },
   "peerDependencies": {
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18"
   },
   "devDependencies": {
-    "@patternfly/patternfly": "^5.0.0",
-    "@patternfly/documentation-framework": "^5.0.15",
-    "@patternfly/react-table": "^5.0.0",
-    "@patternfly/react-code-editor": "^5.0.0",
+    "@patternfly/patternfly": "^6.0.0-alpha.21",
+    "@patternfly/documentation-framework": "^5.3.8",
+    "@patternfly/react-table": "^6.0.0-alpha.2",
+    "@patternfly/react-code-editor": "^6.0.0-alpha.2",
     "react-monaco-editor": "0.51.0",
     "monaco-editor": "0.34.1",
     "rimraf": "^2.6.2",
