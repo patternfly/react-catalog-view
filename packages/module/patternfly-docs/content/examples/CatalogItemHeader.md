@@ -19,7 +19,7 @@ Note: Catalog item header lives in its own package at [`@patternfly/react-catalo
 ```js
 import React from 'react';
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
-import pfLogo6 from './examples/pfLogo2.svg';
+import pfLogo6 from './examples/pfLogo6.svg';
 
 <CatalogItemHeader
   iconImg={pfLogo6}
@@ -31,7 +31,7 @@ import pfLogo6 from './examples/pfLogo2.svg';
 ```js
 import React from 'react';
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
-import pfLogo6 from './examples/pfLogo2.svg';
+import pfLogo6 from './examples/pfLogo6.svg';
 
 <CatalogItemHeader
   iconImg={pfLogo6}
