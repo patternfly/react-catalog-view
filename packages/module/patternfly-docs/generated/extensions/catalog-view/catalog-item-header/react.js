@@ -66,11 +66,11 @@ pageData.liveContext = {
 pageData.relativeImports = "import 'content/examples/./catalogItemHeader.css';"
 pageData.examples = {
   'Basic': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo2.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js"}}>
       
     </Example>,
   'With vendor description': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo2.svg';\n\nconst WithVendorDescription = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"Patternfly-React\"\n    vendor={\n      <span>\n        provided by <a style={{ textDecoration: 'underline' }}href=\"http://redhat.com\">Red Hat</a>\n      </span>\n    }\n  />\n)","title":"With vendor description","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst WithVendorDescription = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"Patternfly-React\"\n    vendor={\n      <span>\n        provided by <a style={{ textDecoration: 'underline' }}href=\"http://redhat.com\">Red Hat</a>\n      </span>\n    }\n  />\n)","title":"With vendor description","lang":"js"}}>
       
     </Example>
 };
