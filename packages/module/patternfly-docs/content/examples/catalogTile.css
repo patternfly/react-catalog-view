@@ -1,5 +1,5 @@
 .ws-react-e-catalog-tile .catalog-tile-pf.featured {
-  border-top: 2px solid #39a5dc;
+  border-top: 2px solid var(--pf-t--global--border--color--brand--default);
 }
 .ws-react-e-catalog-tile .catalog-tile-pf:active, .ws-react-e-catalog-tile .catalog-tile-pf:hover, .ws-react-e-catalog-tile .catalog-tile-pf:focus, .ws-react-e-catalog-tile .catalog-tile-pf:visited {
   color: inherit;
@@ -17,11 +17,11 @@
   font-size: small;
 }
 .ws-react-e-catalog-tile .catalog-tile-pf-header .catalog-tile-pf-subtitle a {
-  color: #0066CC;
+  color: var(--pf-t--global--border--color--brand--default);
   text-decoration: none;
 }
 .ws-react-e-catalog-tile .catalog-tile-pf-header .catalog-tile-pf-subtitle a:hover {
-  color: #004080;
+  color: var(--pf-t--global--border--color--brand--hover);
   text-decoration: underline;
 }
 .ws-react-e-catalog-tile .pf-v6-c-card__actions {

@@ -20,7 +20,7 @@
   word-break: break-word;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a:hover, .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a:focus {
-  color: #0088ce;
+  color: var(--pf-t--global--text--color--brand--hover);
   text-decoration: none;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a.no-wrap {
@@ -33,10 +33,10 @@
   white-space: nowrap;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab.active > a {
-  color: #0088ce;
+  color: var(--pf-t--global--text--color--brand--clicked);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab.active > a::before {
-  background: #0088ce;
+  background: var(--pf-t--global--border--color--brand--clicked);
   content: " ";
   left: 0;
   position: absolute;

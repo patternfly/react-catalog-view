@@ -1,6 +1,6 @@
 .catalog-tile-pf {
   &.featured {
-    border-top: 2px solid var(--pf-v6-global--active-color--100);
+    border-top: 2px solid var(--pf-t--global--border--color--brand--default);
   }
 
   &:active,
@@ -27,7 +27,7 @@
   }
 
   .catalog-tile-pf-subtitle {
-    color: var(--pf-v6-global--Color--200);
+    color: var(--pf-t--global--border--color--brand--default);
     font-size: 13px;
     font-weight: initial;
 
