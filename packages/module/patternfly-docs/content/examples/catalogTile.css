@@ -17,11 +17,11 @@
   font-size: small;
 }
 .ws-react-e-catalog-tile .catalog-tile-pf-header .catalog-tile-pf-subtitle a {
-  color: var(--pf-t--global--border--color--brand--default);
+  color: var(--pf-t--global--text--color--link--default);
   text-decoration: none;
 }
 .ws-react-e-catalog-tile .catalog-tile-pf-header .catalog-tile-pf-subtitle a:hover {
-  color: var(--pf-t--global--border--color--brand--hover);
+  color: var(--pf-t--global--text--color--link--hover);
   text-decoration: underline;
 }
 .ws-react-e-catalog-tile .pf-v6-c-card__actions {
