@@ -7,6 +7,7 @@ const pageData = {
   "section": "extensions",
   "subsection": "Catalog view",
   "deprecated": false,
+  "template": false,
   "beta": false,
   "demo": false,
   "newImplementationLink": false,

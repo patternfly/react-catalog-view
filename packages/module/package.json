@@ -40,18 +40,18 @@
     "patternfly"
   ],
   "dependencies": {
-    "@patternfly/react-core": "6.0.0-alpha.47",
-    "@patternfly/react-styles": "6.0.0-alpha.17"
+    "@patternfly/react-core": "6.0.0-alpha.50",
+    "@patternfly/react-styles": "6.0.0-alpha.19"
   },
   "peerDependencies": {
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18"
   },
   "devDependencies": {
-    "@patternfly/patternfly": "6.0.0-alpha.107",
-    "@patternfly/documentation-framework": "6.0.0-alpha.16",
-    "@patternfly/react-table": "6.0.0-alpha.47",
-    "@patternfly/react-code-editor": "6.0.0-alpha.47",
+    "@patternfly/patternfly": "6.0.0-alpha.117",
+    "@patternfly/documentation-framework": "6.0.0-alpha.20",
+    "@patternfly/react-table": "6.0.0-alpha.50",
+    "@patternfly/react-code-editor": "6.0.0-alpha.50",
     "react-monaco-editor": "0.51.0",
     "monaco-editor": "0.34.1",
     "rimraf": "^2.6.2",
