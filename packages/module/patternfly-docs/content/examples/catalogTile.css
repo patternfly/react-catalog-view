@@ -1,6 +1,3 @@
-.ws-react-e-catalog-tile .catalog-tile-pf.featured {
-  border-top: 2px solid var(--pf-t--global--border--color--brand--default);
-}
 .ws-react-e-catalog-tile .catalog-tile-pf:active, .ws-react-e-catalog-tile .catalog-tile-pf:hover, .ws-react-e-catalog-tile .catalog-tile-pf:focus, .ws-react-e-catalog-tile .catalog-tile-pf:visited {
   color: inherit;
   text-decoration: none;

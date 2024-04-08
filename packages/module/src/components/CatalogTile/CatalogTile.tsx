@@ -113,6 +113,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
         id={id || this.generatedId}
         href={href || '#'}
         className={css('catalog-tile-pf', { featured }, className)}
+        variant={featured ? 'secondary' : 'default'}
         isClickable={!!onClick}
         {...props}
       >
