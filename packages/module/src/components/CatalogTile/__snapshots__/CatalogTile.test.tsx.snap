@@ -3,7 +3,7 @@
 exports[`CatalogTile href renders properly 1`] = `
 <DocumentFragment>
   <a
-    class="pf-v6-c-card catalog-tile-pf featured"
+    class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
     data-ouia-component-id="OUIA-Generated-Card-6"
     data-ouia-component-type="PF5/Card"
     data-ouia-safe="true"
@@ -50,7 +50,7 @@ exports[`CatalogTile renders properly 1`] = `
 <div>
   <div>
     <div
-      class="pf-v6-c-card catalog-tile-pf featured"
+      class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
       data-ouia-component-id="OUIA-Generated-Card-1"
       data-ouia-component-type="PF5/Card"
       data-ouia-safe="true"
@@ -360,7 +360,7 @@ exports[`CatalogTile renders properly 1`] = `
       </div>
     </div>
     <a
-      class="pf-v6-c-card catalog-tile-pf featured"
+      class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
       data-ouia-component-id="OUIA-Generated-Card-4"
       data-ouia-component-type="PF5/Card"
       data-ouia-safe="true"
@@ -464,7 +464,7 @@ exports[`CatalogTile renders properly 1`] = `
       </div>
     </a>
     <a
-      class="pf-v6-c-card catalog-tile-pf featured"
+      class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
       data-ouia-component-id="OUIA-Generated-Card-5"
       data-ouia-component-type="PF5/Card"
       data-ouia-safe="true"
