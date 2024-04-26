@@ -87,7 +87,7 @@ exports[`CatalogTile renders properly 1`] = `
                     />
                   </svg>
                   <span
-                    class="pf-v6-u-screen-reader"
+                    class="pf-v6-screen-reader"
                   >
                     Certified
                   </span>
@@ -197,7 +197,7 @@ exports[`CatalogTile renders properly 1`] = `
                     />
                   </svg>
                   <span
-                    class="pf-v6-u-screen-reader"
+                    class="pf-v6-screen-reader"
                   >
                     Certified
                   </span>
@@ -225,7 +225,7 @@ exports[`CatalogTile renders properly 1`] = `
                     />
                   </svg>
                   <span
-                    class="pf-v6-u-screen-reader"
+                    class="pf-v6-screen-reader"
                   >
                     USDA Approved
                   </span>
@@ -309,7 +309,7 @@ exports[`CatalogTile renders properly 1`] = `
                     />
                   </svg>
                   <span
-                    class="pf-v6-u-screen-reader"
+                    class="pf-v6-screen-reader"
                   >
                     USDA Approved
                   </span>
@@ -397,7 +397,7 @@ exports[`CatalogTile renders properly 1`] = `
                     />
                   </svg>
                   <span
-                    class="pf-v6-u-screen-reader"
+                    class="pf-v6-screen-reader"
                   >
                     Certified
                   </span>
