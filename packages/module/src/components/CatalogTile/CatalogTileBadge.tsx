@@ -28,7 +28,7 @@ export const CatalogTileBadge: React.FunctionComponent<CatalogTileBadgeProps> = 
         <Tooltip id={id} content={title}>
           <span className={classes} {...props}>
             {children}
-            <span className="pf-v6-u-screen-reader">{title}</span>
+            <span className="pf-v6-screen-reader">{title}</span>
           </span>
         </Tooltip>
       </React.Fragment>
