@@ -1,21 +1,18 @@
 .properties-side-panel-pf {
   width: 165px;
-}
-
-.properties-side-panel-pf-property {
-  margin-top: 24px; }
-.properties-side-panel-pf-property:first-of-type {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pf-t--global--spacer--lg);
 }
 
 .properties-side-panel-pf-property-label {
-  font-weight: 700 !important;
-  font-size: 14px !important;
+  font-weight: var(--pf-t--global--font--weight--body--bold) !important;
+  font-size: var(--pf-t--global--font--size--body--sm) !important;
   margin: 0 !important;
 }
 
 .properties-side-panel-pf-property-value {
-  font-size: 14px !important;
-  margin-top: 8px;
+  font-size: var(--pf-t--global--font--size--body--regular) !important;
+  margin-top: var(--pf-t--global--spacer--sm);
   word-break: break-word;
 }

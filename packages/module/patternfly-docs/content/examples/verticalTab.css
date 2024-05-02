@@ -1,26 +1,37 @@
 .ws-react-e-vertical-tabs .vertical-tabs-pf {
   list-style: none;
-  margin: 0 0 30px;
+  margin-block-start: 0;
+  margin-block-end: 30px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pf-t--global--spacer--xs);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf .vertical-tabs-pf {
-  margin-bottom: 0;
+  margin-block-end: 0;
+  padding-block-start: var(--pf-t--global--spacer--xs);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab {
-  margin-top: 4px;
   position: relative;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a {
-  color: initial;
+  color: var(--pf-t--global--text--color--regular);
   display: inline-block;
-  font-size: 13px;
-  padding: 3px 6px 3px 15px;
+  font-size: var(--pf-t--global--font--size--body--default);
+  padding-block: var(--pf-t--global--spacer--xs);
+  padding-inline: var(--pf-t--global--spacer--sm);
   vertical-align: top;
   width: 100%;
   word-break: break-word;
+  background-color: var(--pf-t--global--background--color--action--plain--default);
+  border-radius: var(--pf-t--global--border--radius--small);
+  margin-inline-start: var(--pf-t--global--spacer--md);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a:hover, .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a:focus {
-  color: var(--pf-t--global--text--color--brand--hover);
+  color: var(--pf-t--global--text--color--regular);
+  background-color: var(--pf-t--global--background--color--action--plain--hover);
   text-decoration: none;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a.no-wrap {
@@ -32,22 +43,23 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.ws-react-e-vertical-tabs .vertical-tabs-pf-tab.active > a {
-  color: var(--pf-t--global--text--color--brand--clicked);
+.ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a.disabled {
+  color: var(--pf-t--global--text--color--on-disabled);
+  background: var(--pf-t--global--background--color--disabled--default);
+  pointer-events: none;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab.active > a::before {
-  background: var(--pf-t--global--border--color--brand--clicked);
+  background: var(--pf-t--global--border--color--clicked);
   content: " ";
-  left: 0;
+  inset-inline-start: 0;
   position: absolute;
-  width: 3px;
+  width: var(--pf-t--global--border--width--extra-strong);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab:first-of-type {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > .vertical-tabs-pf > .vertical-tabs-pf-tab {
-  position: initial;
-  padding-left: 15px;
+  margin-inline-start: var(--pf-t--global--spacer--md);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf.restrict-tabs .vertical-tabs-pf-tab {
   display: none;

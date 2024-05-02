@@ -119,7 +119,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
       >
         {(badges.length > 0 || iconImg || iconClass || icon || onClick) && (
           <CardHeader
-            actions={{ actions: badges.length > 0 && this.renderBadges(badges) }}
+            actions={{ actions: badges.length > 0 && this.renderBadges(badges), hasNoOffset: true }}
             selectableActions={
               onClick && {
                 selectableActionId: id + '-input',
