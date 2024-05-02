@@ -23,6 +23,7 @@ Note: PropertiesSidePanel lives in its own package at [`@patternfly/react-catalo
 import React from 'react';
 import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
+import { Icon } from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
 
@@ -31,9 +32,12 @@ import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
   <PropertyItem
     label="Certified Level"
     value={
-      <span>
-        <OkIcon style={{color: '--pf-t--global--icon--color--status--success--default'}} /> Certified
-      </span>
+      <>
+        <Icon status="success">
+          <OkIcon />
+        </Icon>
+        Certified
+      </>
     }
   />
   <PropertyItem label="Provider" value="Red Hat, Inc" />
