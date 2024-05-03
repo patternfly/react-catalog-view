@@ -48,10 +48,11 @@
   background: var(--pf-t--global--background--color--disabled--default);
   pointer-events: none;
 }
-.ws-react-e-vertical-tabs .vertical-tabs-pf-tab.active > a::before {
+.ws-react-e-vertical-tabs .vertical-tabs-pf-tab.active::before {
   background: var(--pf-t--global--border--color--clicked);
   content: " ";
   inset-inline-start: 0;
+  inset-block-start: var(--pf-t--global--spacer--xs);
   position: absolute;
   width: var(--pf-t--global--border--width--extra-strong);
 }
