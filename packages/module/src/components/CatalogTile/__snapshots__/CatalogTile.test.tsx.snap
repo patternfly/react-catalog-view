@@ -61,7 +61,7 @@ exports[`CatalogTile renders properly 1`] = `
         class="pf-v6-c-card__header"
       >
         <div
-          class="pf-v6-c-card__actions"
+          class="pf-v6-c-card__actions pf-m-no-offset"
         >
           <div
             class="catalog-tile-pf-badge-container"
@@ -171,7 +171,7 @@ exports[`CatalogTile renders properly 1`] = `
         class="pf-v6-c-card__header"
       >
         <div
-          class="pf-v6-c-card__actions"
+          class="pf-v6-c-card__actions pf-m-no-offset"
         >
           <div
             class="catalog-tile-pf-badge-container"
@@ -283,7 +283,7 @@ exports[`CatalogTile renders properly 1`] = `
         class="pf-v6-c-card__header"
       >
         <div
-          class="pf-v6-c-card__actions"
+          class="pf-v6-c-card__actions pf-m-no-offset"
         >
           <div
             class="catalog-tile-pf-badge-container"
@@ -371,7 +371,7 @@ exports[`CatalogTile renders properly 1`] = `
         class="pf-v6-c-card__header"
       >
         <div
-          class="pf-v6-c-card__actions"
+          class="pf-v6-c-card__actions pf-m-no-offset"
         >
           <div
             class="catalog-tile-pf-badge-container"
@@ -475,7 +475,7 @@ exports[`CatalogTile renders properly 1`] = `
         class="pf-v6-c-card__header"
       >
         <div
-          class="pf-v6-c-card__actions"
+          class="pf-v6-c-card__actions pf-m-no-offset"
         />
         <div
           class="pf-v6-c-card__header-main"
