@@ -8,7 +8,7 @@ sourceLink: https://github.com/patternfly/react-catalog-view/tree/main/packages/
 ---
 
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 import './catalogItemHeader.css';
 
 ## Introduction
@@ -19,10 +19,10 @@ Note: Catalog item header lives in its own package at [`@patternfly/react-catalo
 ```js
 import React from 'react';
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
-import pfLogo2 from './examples/pfLogo2.svg';
+import pfLogo6 from './examples/pfLogo6.svg';
 
 <CatalogItemHeader
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   title="PatternFly"
   />
 ```
@@ -31,10 +31,10 @@ import pfLogo2 from './examples/pfLogo2.svg';
 ```js
 import React from 'react';
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
-import pfLogo2 from './examples/pfLogo2.svg';
+import pfLogo6 from './examples/pfLogo6.svg';
 
 <CatalogItemHeader
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   title="Patternfly-React"
   vendor={
     <span>

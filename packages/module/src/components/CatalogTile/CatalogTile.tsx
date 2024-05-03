@@ -113,12 +113,13 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
         id={id || this.generatedId}
         href={href || '#'}
         className={css('catalog-tile-pf', { featured }, className)}
+        variant={featured ? 'secondary' : 'default'}
         isClickable={!!onClick}
         {...props}
       >
         {(badges.length > 0 || iconImg || iconClass || icon || onClick) && (
           <CardHeader
-            actions={{ actions: badges.length > 0 && this.renderBadges(badges) }}
+            actions={{ actions: badges.length > 0 && this.renderBadges(badges), hasNoOffset: true }}
             selectableActions={
               onClick && {
                 selectableActionId: id + '-input',

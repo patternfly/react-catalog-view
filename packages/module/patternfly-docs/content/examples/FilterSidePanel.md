@@ -106,7 +106,7 @@ class MockFilterSidePanelExample extends React.Component {
   
       return (
         <span>
-          <span className="pf-v5-u-screen-reader">{`${count} stars`}</span>
+          <span className="pf-v6-screen-reader">{`${count} stars`}</span>
           {stars}
         </span>
       );
@@ -118,7 +118,7 @@ class MockFilterSidePanelExample extends React.Component {
     const maxShowCount = 5;
     const leeway = 2;
     return (
-     <div style={{ width: '205px', border: '1px solid grey', paddingTop: '20px' }}>   
+     <div style={{ width: '205px' }}>   
       <FilterSidePanel id="filter-panel">
         <FilterSidePanelCategory key="cat1"> 
           <TextInput type="text" id="filter-text-input" placeholder="Filter by name" aria-label="filter text input" />

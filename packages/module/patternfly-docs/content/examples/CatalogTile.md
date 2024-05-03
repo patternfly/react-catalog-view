@@ -10,7 +10,7 @@ sourceLink: https://github.com/patternfly/react-catalog-view/tree/main/packages/
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 import './catalogTile.css';
 
 ## Introduction
@@ -23,13 +23,13 @@ Note: Catalog tile lives in its own package at [`@patternfly/react-catalog-view-
 import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 import '../../../../dist/css/react-catalog-view-extension.css';
 
 <CatalogTile
   id="simple-tile"
   featured
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   iconAlt="PatternFly logo"
   badges={[
     <CatalogTileBadge title="Certified">
@@ -52,11 +52,11 @@ import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 
 <CatalogTile
   id="simple-footer"
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   iconAlt="PatternFly logo"
   badges={[
     <CatalogTileBadge title="Certified">
@@ -72,7 +72,7 @@ import pfLogo2 from './pfLogo2.svg';
   }
   footer={
     <span>
-      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v5-global--success-color--100)'}} /> Enabled
+      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v6-global--success-color--100)'}} /> Enabled
     </span>
   }
 />
@@ -83,11 +83,11 @@ import pfLogo2 from './pfLogo2.svg';
 import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 
 <CatalogTile
   id="simple-link-variant"
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   iconAlt="PatternFly logo"
   badges={[
     <CatalogTileBadge title="Certified">
@@ -111,18 +111,18 @@ import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 
 <CatalogTile
   id="multiIcon"
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   iconAlt="PatternFly logo"
   badges={[
     <CatalogTileBadge title="Certified">
       <CogIcon />
     </CatalogTileBadge>,
     <CatalogTileBadge title="USDA Approved">
-      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v5-global--success-color--100)'}} />
+      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v6-global--success-color--100)'}} />
     </CatalogTileBadge>
   ]}
   title="Patternfly-React"
@@ -139,11 +139,11 @@ import pfLogo2 from './pfLogo2.svg';
 ```js
 import React from 'react';
 import { CatalogTile } from '@patternfly/react-catalog-view-extension';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 
 <CatalogTile
   id="text-badge"
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   iconAlt="PatternFly logo"
   badges={[
     'Community'
@@ -163,12 +163,12 @@ import pfLogo2 from './pfLogo2.svg';
 import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
-import pfLogo2 from './pfLogo2.svg';
+import pfLogo6 from './pfLogo6.svg';
 
 <CatalogTile
   id="simple-with-children"
   featured
-  iconImg={pfLogo2}
+  iconImg={pfLogo6}
   iconAlt="PatternFly logo"
   badges={[
     <CatalogTileBadge title="Certified">
