@@ -67,11 +67,11 @@ pageData.liveContext = {
 pageData.relativeImports = "import 'content/examples/./catalogItemHeader.css';"
 pageData.examples = {
   'Basic': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js","className":""}}>
       
     </Example>,
   'With vendor description': props => 
-    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst WithVendorDescription = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"Patternfly-React\"\n    vendor={\n      <span>\n        provided by <a style={{ textDecoration: 'underline' }}href=\"http://redhat.com\">Red Hat</a>\n      </span>\n    }\n  />\n)","title":"With vendor description","lang":"js"}}>
+    <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst WithVendorDescription = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"Patternfly-React\"\n    vendor={\n      <span>\n        provided by <a style={{ textDecoration: 'underline' }}href=\"http://redhat.com\">Red Hat</a>\n      </span>\n    }\n  />\n)","title":"With vendor description","lang":"js","className":""}}>
       
     </Example>
 };
@@ -81,10 +81,10 @@ const Component = () => (
     <AutoLinkHeader {...{"id":"introduction","size":"h2","className":"ws-title ws-h2"}}>
       {`Introduction`}
     </AutoLinkHeader>
-    <p {...{"className":"ws-p"}}>
+    <p {...{"className":"pf-v6-c-content--p ws-p "}}>
       {`Note: Catalog item header lives in its own package at `}
-      <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@patternfly/react-catalog-view-extension"}}>
-        <code {...{"className":"ws-code"}}>
+      <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@patternfly/react-catalog-view-extension","className":""}}>
+        <code {...{"className":"ws-code "}}>
           {`@patternfly/react-catalog-view-extension`}
         </code>
       </PatternflyThemeLink>
