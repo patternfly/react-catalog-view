@@ -53,6 +53,7 @@
     "@patternfly/react-table": "6.0.0-alpha.61",
     "@patternfly/react-code-editor": "6.0.0-alpha.61",
     "@octokit/rest": "^18.0.0",
+    "surge": "^0.23.1",
     "react-monaco-editor": "0.51.0",
     "monaco-editor": "0.34.1",
     "rimraf": "^2.6.2",
