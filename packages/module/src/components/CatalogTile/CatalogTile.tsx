@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@patternfly/react-core';
+import { Card, CardHeader, CardTitle, CardBody, CardFooter, CardProps } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { getUniqueId } from '@patternfly/react-core';
 
-export interface CatalogTileProps extends Omit<React.HTMLProps<HTMLElement>, 'title'> {
+export interface CatalogTileProps extends Omit<CardProps, 'title'> {
   /** Id */
   id?: any;
   /** Additional css classes */
