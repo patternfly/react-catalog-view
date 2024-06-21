@@ -2,7 +2,7 @@ module.exports = {
   branches: [
     'do-not-delete',
     { name: 'main', channel: 'prerelease', prerelease: 'prerelease' },
-    { name: 'v6', channel: 'alpha', prerelease: 'alpha' },
+    { name: 'v6', channel: 'alpha', prerelease: 'alpha' }
   ],
   analyzeCommits: {
     preset: 'angular'
@@ -12,7 +12,10 @@ module.exports = {
       '@semantic-release/commit-analyzer',
       {
         preset: 'angular',
-        releaseRules: [{ type: 'chore', scope: 'deps', release: 'patch' }]
+        releaseRules: [
+          { type: 'chore', scope: 'deps', release: 'patch' },
+          { type: 'chore', scope: 'release', release: 'patch' }
+        ]
       }
     ],
     '@semantic-release/release-notes-generator',
