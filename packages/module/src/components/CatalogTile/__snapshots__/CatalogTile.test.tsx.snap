@@ -2,14 +2,46 @@
 
 exports[`CatalogTile href renders properly 1`] = `
 <DocumentFragment>
-  <a
-    class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
+  <div
+    class="pf-v6-c-card pf-m-secondary pf-m-clickable catalog-tile-pf featured"
     data-ouia-component-id="OUIA-Generated-Card-6"
     data-ouia-component-type="PF6/Card"
     data-ouia-safe="true"
-    href="http://patternfly.org"
     id="test-href"
   >
+    <div
+      class="pf-v6-c-card__header"
+    >
+      <div
+        class="pf-v6-c-card__actions pf-m-no-offset"
+      >
+        <div
+          class="pf-v6-c-card__selectable-actions"
+        >
+          <div
+            class="pf-v6-c-radio pf-m-standalone"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="test-href"
+              class="pf-v6-c-radio__input pf-v6-screen-reader"
+              data-ouia-component-id="OUIA-Generated-Radio-3"
+              data-ouia-component-type="PF6/Radio"
+              data-ouia-safe="true"
+              id="test-href-input"
+              type="radio"
+            />
+            <label
+              class="pf-v6-c-radio__label"
+              for="test-href-input"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="pf-v6-c-card__header-main"
+      />
+    </div>
     <div
       class="pf-v6-c-card__title"
     >
@@ -42,7 +74,7 @@ exports[`CatalogTile href renders properly 1`] = `
         </span>
       </div>
     </div>
-  </a>
+  </div>
 </DocumentFragment>
 `;
 
@@ -54,7 +86,6 @@ exports[`CatalogTile renders properly 1`] = `
       data-ouia-component-id="OUIA-Generated-Card-1"
       data-ouia-component-type="PF6/Card"
       data-ouia-safe="true"
-      href="#"
       id="single-badge-test"
     >
       <div
@@ -164,7 +195,6 @@ exports[`CatalogTile renders properly 1`] = `
       data-ouia-component-id="OUIA-Generated-Card-2"
       data-ouia-component-type="PF6/Card"
       data-ouia-safe="true"
-      href="#"
       id="multi-badge-test"
     >
       <div
@@ -276,7 +306,6 @@ exports[`CatalogTile renders properly 1`] = `
       data-ouia-component-id="OUIA-Generated-Card-3"
       data-ouia-component-type="PF6/Card"
       data-ouia-safe="true"
-      href="#"
       id="test-iconClass"
     >
       <div
@@ -359,12 +388,11 @@ exports[`CatalogTile renders properly 1`] = `
         </div>
       </div>
     </div>
-    <a
-      class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
+    <div
+      class="pf-v6-c-card pf-m-secondary pf-m-clickable catalog-tile-pf featured"
       data-ouia-component-id="OUIA-Generated-Card-4"
       data-ouia-component-type="PF6/Card"
       data-ouia-safe="true"
-      href="https://github.com/patternfly/patternfly-react"
       id="tile-footer-test"
     >
       <div
@@ -404,6 +432,28 @@ exports[`CatalogTile renders properly 1`] = `
                 </span>
               </div>
             </span>
+          </div>
+          <div
+            class="pf-v6-c-card__selectable-actions"
+          >
+            <div
+              class="pf-v6-c-radio pf-m-standalone"
+            >
+              <input
+                aria-invalid="false"
+                aria-labelledby="tile-footer-test"
+                class="pf-v6-c-radio__input pf-v6-screen-reader"
+                data-ouia-component-id="OUIA-Generated-Radio-1"
+                data-ouia-component-type="PF6/Radio"
+                data-ouia-safe="true"
+                id="tile-footer-test-input"
+                type="radio"
+              />
+              <label
+                class="pf-v6-c-radio__label"
+                for="tile-footer-test-input"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -462,13 +512,12 @@ exports[`CatalogTile renders properly 1`] = `
            Enabled
         </span>
       </div>
-    </a>
-    <a
-      class="pf-v6-c-card pf-m-secondary catalog-tile-pf featured"
+    </div>
+    <div
+      class="pf-v6-c-card pf-m-secondary pf-m-clickable catalog-tile-pf featured"
       data-ouia-component-id="OUIA-Generated-Card-5"
       data-ouia-component-type="PF6/Card"
       data-ouia-safe="true"
-      href="https://github.com/patternfly/patternfly-react"
       id="custom-icon-svg-test"
     >
       <div
@@ -476,7 +525,30 @@ exports[`CatalogTile renders properly 1`] = `
       >
         <div
           class="pf-v6-c-card__actions pf-m-no-offset"
-        />
+        >
+          <div
+            class="pf-v6-c-card__selectable-actions"
+          >
+            <div
+              class="pf-v6-c-radio pf-m-standalone"
+            >
+              <input
+                aria-invalid="false"
+                aria-labelledby="custom-icon-svg-test"
+                class="pf-v6-c-radio__input pf-v6-screen-reader"
+                data-ouia-component-id="OUIA-Generated-Radio-2"
+                data-ouia-component-type="PF6/Radio"
+                data-ouia-safe="true"
+                id="custom-icon-svg-test-input"
+                type="radio"
+              />
+              <label
+                class="pf-v6-c-radio__label"
+                for="custom-icon-svg-test-input"
+              />
+            </div>
+          </div>
+        </div>
         <div
           class="pf-v6-c-card__header-main"
         >
@@ -513,7 +585,7 @@ exports[`CatalogTile renders properly 1`] = `
           </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;
