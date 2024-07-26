@@ -65,6 +65,8 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
 
     if (!href) {
       e.preventDefault();
+    } else {
+      window.open(href, '_blank');
     }
     if (onClick) {
       onClick(e);
@@ -109,19 +111,16 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
 
     return (
       <Card
-        component={href ? 'a' : 'div'}
         id={id || this.generatedId}
-        href={href || '#'}
         className={css('catalog-tile-pf', { featured }, className)}
         variant={featured ? 'secondary' : 'default'}
-        isClickable={!!onClick}
+        isClickable={(onClick || href) ? true : false}
         {...props}
       >
-        {(badges.length > 0 || iconImg || iconClass || icon || onClick) && (
+        {(badges.length > 0 || iconImg || iconClass || icon || onClick || href) && (
           <CardHeader
             actions={{ actions: badges.length > 0 && this.renderBadges(badges), hasNoOffset: true }}
-            selectableActions={
-              onClick && {
+            selectableActions={ (onClick || href) && {
                 selectableActionId: id + '-input',
                 onClickAction: (e) => this.handleClick(e),
                 selectableActionAriaLabelledby: id
