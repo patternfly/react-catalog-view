@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { css } from '@patternfly/react-styles';
 
-import { Text, TextVariants } from '@patternfly/react-core';
+import { Content, ContentVariants } from '@patternfly/react-core';
 
 export interface PropertyItemProps extends Omit<React.HTMLProps<HTMLDivElement>, 'label' | 'value'> {
   /** Additional css classes for the Property Item */
@@ -21,9 +21,9 @@ export const PropertyItem: React.FunctionComponent<PropertyItemProps> = ({
   const classes = css('properties-side-panel-pf-property', className);
   return (
     <div className={classes} {...props}>
-      <Text component={TextVariants.h5} className="properties-side-panel-pf-property-label">
+      <Content component={ContentVariants.h5} className="properties-side-panel-pf-property-label">
         {label}
-      </Text>
+      </Content>
       <div className="properties-side-panel-pf-property-value">{value}</div>
     </div>
   );

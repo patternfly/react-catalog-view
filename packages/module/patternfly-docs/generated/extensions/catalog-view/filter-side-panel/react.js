@@ -177,7 +177,7 @@ pageData.examples = {
 
 const Component = () => (
   <React.Fragment>
-    <AutoLinkHeader {...{"id":"introduction","size":"h2","className":"ws-title ws-h2"}}>
+    <AutoLinkHeader {...{"id":"introduction","headingLevel":"h2","className":"ws-title ws-h2"}}>
       {`Introduction`}
     </AutoLinkHeader>
     <p {...{"className":"pf-v6-c-content--p ws-p "}}>
@@ -192,7 +192,7 @@ const Component = () => (
     <p {...{"className":"pf-v6-c-content--p ws-p "}}>
       {`Note: the width, border, and top padding styling are not part of the FilterSidePanel.`}
     </p>
-    <AutoLinkHeader {...{"id":"examples","size":"h2","className":"ws-title ws-h2"}}>
+    <AutoLinkHeader {...{"id":"examples","headingLevel":"h2","className":"ws-title ws-h2"}}>
       {`Examples`}
     </AutoLinkHeader>
     {React.createElement(pageData.examples["Basic"])}
