@@ -53,6 +53,6 @@ jobs:
         if: always()
       - run: yarn serve:docs & yarn test:a11y
         name: a11y tests
-      - run: node .github/upload-preview.js coverage
+      - run: node .github/upload-preview.js packages/module/coverage
         name: Upload a11y report
         if: always()
