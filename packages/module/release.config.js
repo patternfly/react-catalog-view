@@ -1,8 +1,8 @@
 module.exports = {
   branches: [
     'do-not-delete',
-    { name: 'main', channel: 'prerelease', prerelease: 'prerelease' },
-    { name: 'v6', channel: 'alpha', prerelease: 'alpha' }
+    { name: 'v5', channel: 'prerelease-v5', range: '5.x' },
+    { name: 'main', channel: 'prerelease', prerelease: 'prerelease' }
   ],
   analyzeCommits: {
     preset: 'angular'
@@ -12,10 +12,7 @@ module.exports = {
       '@semantic-release/commit-analyzer',
       {
         preset: 'angular',
-        releaseRules: [
-          { type: 'chore', scope: 'deps', release: 'patch' },
-          { type: 'chore', scope: 'release', release: 'patch' }
-        ]
+        releaseRules: [{ type: 'chore', scope: 'deps', release: 'patch' }]
       }
     ],
     '@semantic-release/release-notes-generator',
@@ -23,5 +20,5 @@ module.exports = {
     '@semantic-release/npm'
   ],
   tagFormat: 'prerelease-v${version}',
-  dryRun: false
+  dryRun: true
 };
