@@ -1,6 +1,6 @@
 {
   "name": "@patternfly/react-catalog-view-extension",
-  "version": "6.0.0-alpha.0",
+  "version": "6.0.0-prerelease.0",
   "description": "This library provides catalog view extensions for PatternFly 4 React.",
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
@@ -33,7 +33,7 @@
   "homepage": "https://github.com/patternfly/react-catalog-view#readme",
   "publishConfig": {
     "access": "public",
-    "tag": "alpha"
+    "tag": "prerelease"
   },
   "keywords": [
     "react",
