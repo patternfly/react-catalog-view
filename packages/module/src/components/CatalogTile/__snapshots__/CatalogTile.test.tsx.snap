@@ -18,24 +18,12 @@ exports[`CatalogTile href renders properly 1`] = `
         <div
           class="pf-v6-c-card__selectable-actions"
         >
-          <div
-            class="pf-v6-c-radio pf-m-standalone"
-          >
-            <input
-              aria-invalid="false"
-              aria-labelledby="test-href"
-              class="pf-v6-c-radio__input pf-v6-screen-reader"
-              data-ouia-component-id="OUIA-Generated-Radio-3"
-              data-ouia-component-type="PF6/Radio"
-              data-ouia-safe="true"
-              id="test-href-input"
-              type="radio"
-            />
-            <label
-              class="pf-v6-c-radio__label"
-              for="test-href-input"
-            />
-          </div>
+          <button
+            aria-labelledby="test-href"
+            class="pf-v6-c-card__clickable-action"
+            id="test-href-input"
+            type="button"
+          />
         </div>
       </div>
       <div
@@ -436,24 +424,12 @@ exports[`CatalogTile renders properly 1`] = `
           <div
             class="pf-v6-c-card__selectable-actions"
           >
-            <div
-              class="pf-v6-c-radio pf-m-standalone"
-            >
-              <input
-                aria-invalid="false"
-                aria-labelledby="tile-footer-test"
-                class="pf-v6-c-radio__input pf-v6-screen-reader"
-                data-ouia-component-id="OUIA-Generated-Radio-1"
-                data-ouia-component-type="PF6/Radio"
-                data-ouia-safe="true"
-                id="tile-footer-test-input"
-                type="radio"
-              />
-              <label
-                class="pf-v6-c-radio__label"
-                for="tile-footer-test-input"
-              />
-            </div>
+            <button
+              aria-labelledby="tile-footer-test"
+              class="pf-v6-c-card__clickable-action"
+              id="tile-footer-test-input"
+              type="button"
+            />
           </div>
         </div>
         <div
@@ -529,24 +505,12 @@ exports[`CatalogTile renders properly 1`] = `
           <div
             class="pf-v6-c-card__selectable-actions"
           >
-            <div
-              class="pf-v6-c-radio pf-m-standalone"
-            >
-              <input
-                aria-invalid="false"
-                aria-labelledby="custom-icon-svg-test"
-                class="pf-v6-c-radio__input pf-v6-screen-reader"
-                data-ouia-component-id="OUIA-Generated-Radio-2"
-                data-ouia-component-type="PF6/Radio"
-                data-ouia-safe="true"
-                id="custom-icon-svg-test-input"
-                type="radio"
-              />
-              <label
-                class="pf-v6-c-radio__label"
-                for="custom-icon-svg-test-input"
-              />
-            </div>
+            <button
+              aria-labelledby="custom-icon-svg-test"
+              class="pf-v6-c-card__clickable-action"
+              id="custom-icon-svg-test-input"
+              type="button"
+            />
           </div>
         </div>
         <div

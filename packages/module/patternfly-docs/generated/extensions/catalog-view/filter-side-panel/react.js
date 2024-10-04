@@ -180,7 +180,7 @@ const Component = () => (
     <AutoLinkHeader {...{"id":"introduction","headingLevel":"h2","className":"ws-title ws-h2"}}>
       {`Introduction`}
     </AutoLinkHeader>
-    <p {...{"className":"pf-v6-c-content--p ws-p "}}>
+    <p {...{"className":"pf-v6-c-content--p pf-m-editorial ws-p "}}>
       {`Note: FilterSidePanel lives in its own package at `}
       <PatternflyThemeLink {...{"to":"https://www.npmjs.com/package/@patternfly/react-catalog-view-extension","className":""}}>
         <code {...{"className":"ws-code "}}>
@@ -189,7 +189,7 @@ const Component = () => (
       </PatternflyThemeLink>
       {`!`}
     </p>
-    <p {...{"className":"pf-v6-c-content--p ws-p "}}>
+    <p {...{"className":"pf-v6-c-content--p pf-m-editorial ws-p "}}>
       {`Note: the width, border, and top padding styling are not part of the FilterSidePanel.`}
     </p>
     <AutoLinkHeader {...{"id":"examples","headingLevel":"h2","className":"ws-title ws-h2"}}>
