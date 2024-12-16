@@ -4,7 +4,6 @@ import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-ex
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
 import pfLogo6 from '../../../../content/examples/./pfLogo6.svg';
-import '../../../../content/examples/./catalogTile.css';
 const pageData = {
   "id": "Catalog tile",
   "section": "extensions",
@@ -133,7 +132,6 @@ pageData.liveContext = {
   OutlinedCheckCircleIcon,
   pfLogo6
 };
-pageData.relativeImports = "import 'content/examples/./catalogTile.css';"
 pageData.examples = {
   'Basic featured tile': props => 
     <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';\nimport CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';\nimport pfLogo6 from './pfLogo6.svg';\nimport '../../../../dist/css/react-catalog-view-extension.css';\n\nconst BasicFeaturedTile = () => (\n  <CatalogTile\n    id=\"simple-tile\"\n    featured\n    iconImg={pfLogo6}\n    iconAlt=\"PatternFly logo\"\n    badges={[\n      <CatalogTileBadge title=\"Certified\">\n        <CogIcon />\n      </CatalogTileBadge>\n    ]}\n    title=\"Patternfly-React\"\n    vendor=\"provided by Red Hat\"\n    description={\n      'This is a very, very long description that should be truncated after three lines. ' +\n      'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +\n      'This has changed from PatternFly 3.'\n    }\n  />\n)","title":"Basic featured tile","lang":"js","className":""}}>
