@@ -4,7 +4,6 @@ import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-vie
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
-import '../../../../content/examples/./propertiesSidePanel.css';
 const pageData = {
   "id": "Properties side panel",
   "section": "extensions",
@@ -74,7 +73,6 @@ pageData.liveContext = {
   ExternalLinkAltIcon,
   GlobeIcon
 };
-pageData.relativeImports = "import 'content/examples/./propertiesSidePanel.css';"
 pageData.examples = {
   'Properties side panel with property items': props => 
     <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';\nimport OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';\nimport { Icon } from '@patternfly/react-core';\nimport ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';\nimport GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';\n\nconst PropertiesSidePanelWithPropertyItems = () => (\n  <PropertiesSidePanel>\n    <PropertyItem label=\"Operator Version\" value=\"0.9.8 (latest)\" />\n    <PropertyItem\n      label=\"Certified Level\"\n      value={\n        <>\n          <Icon status=\"success\">\n            <OkIcon />\n          </Icon>\n          Certified\n        </>\n      }\n    />\n    <PropertyItem label=\"Provider\" value=\"Red Hat, Inc\" />\n    <PropertyItem label=\"Health Index\" value=\"A\" />\n    <PropertyItem\n      label=\"Repository\"\n      value={\n        <a href=\"https://quay.io/repository/redhat/prometheus-operator\">\n          https://quay.io/repository/redhat/prometheus-operator\n        </a>\n      }\n    />\n    <PropertyItem\n      label=\"Container Image\"\n      value={\n        <a href=\"#\">\n          0.22.2 <ExternalLinkAltIcon />\n        </a>\n      }\n    />\n    <PropertyItem\n      label=\"Created At\"\n      value={\n        <span>\n          <GlobeIcon /> Aug 23, 1:58pm\n        </span>\n      }\n    />\n    <PropertyItem label=\"Support\" value={<a href=\"#\">Red Hat</a>} />\n  </PropertiesSidePanel>\n)","title":"Properties side panel with property items","lang":"js","className":""}}>

@@ -2,7 +2,6 @@ import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@patternfly/documentation-framework/components';
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
 import pfLogo6 from '../../../../content/examples/./pfLogo6.svg';
-import '../../../../content/examples/./catalogItemHeader.css';
 const pageData = {
   "id": "Catalog item header",
   "section": "extensions",
@@ -64,7 +63,6 @@ pageData.liveContext = {
   CatalogItemHeader,
   pfLogo6
 };
-pageData.relativeImports = "import 'content/examples/./catalogItemHeader.css';"
 pageData.examples = {
   'Basic': props => 
     <Example {...pageData} {...props} {...{"code":"import React from 'react';\nimport { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';\nimport pfLogo6 from './examples/pfLogo6.svg';\n\nconst Basic = () => (\n  <CatalogItemHeader\n    iconImg={pfLogo6}\n    title=\"PatternFly\"\n    />\n)","title":"Basic","lang":"js","className":""}}>

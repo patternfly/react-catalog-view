@@ -17,9 +17,10 @@
     "docs:screenshots": "pf-docs-framework screenshots --urlPrefix http://localhost:5000",
     "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
     "serve:a11y": "yarn serve coverage",
-    "generate": "yarn build:sass && yarn copy:sass",
+    "generate": "yarn build:sass && yarn copy:sass && yarn copy:css",
     "build:sass": "node buildSass.js",
-    "copy:sass": "shx mkdir -p dist/sass && shx cp -r sass/react-catalog-view-extension/* dist/sass"
+    "copy:sass": "shx mkdir -p dist/sass && shx cp -r sass/react-catalog-view-extension/* dist/sass",
+    "copy:css": "shx mkdir -p dist/css && shx cp src/components/*.css dist/css"
   },
   "repository": {
     "type": "git",

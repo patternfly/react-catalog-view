@@ -11,7 +11,6 @@ import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-vie
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
-import './propertiesSidePanel.css';
 
 ## Introduction
 Note: PropertiesSidePanel lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!

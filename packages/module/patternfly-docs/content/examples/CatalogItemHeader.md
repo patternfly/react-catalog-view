@@ -9,7 +9,6 @@ sourceLink: https://github.com/patternfly/react-catalog-view/tree/main/packages/
 
 import { CatalogItemHeader } from '@patternfly/react-catalog-view-extension';
 import pfLogo6 from './pfLogo6.svg';
-import './catalogItemHeader.css';
 
 ## Introduction
 Note: Catalog item header lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!

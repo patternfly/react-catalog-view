@@ -8,7 +8,6 @@ sourceLink: https://github.com/patternfly/react-catalog-view/tree/main/packages/
 ---
 
 import { VerticalTabs, VerticalTabsTab } from '@patternfly/react-catalog-view-extension';
-import './verticalTab.css';
 
 ## Introduction
 Note: Vertical tabs lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
