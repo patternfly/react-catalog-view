@@ -2,6 +2,9 @@
   color: var(--pf-t--global--text--color--regular);
   text-decoration: none;
 }
+.ws-react-e-catalog-tile .pf-v6-c-card__header-main {
+  display: flex;
+}
 .ws-react-e-catalog-tile .catalog-tile-pf-header .catalog-tile-pf-subtitle {
   color: var(--pf-t--global--text--color--subtle);
   font-size: var(--pf-t--global--font--size--body--sm);

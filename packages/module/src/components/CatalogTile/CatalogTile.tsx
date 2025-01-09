@@ -119,7 +119,6 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
       >
         {(badges.length > 0 || iconImg || iconClass || icon || onClick || href) && (
           <CardHeader
-            actions={{ actions: badges.length > 0 && this.renderBadges(badges), hasNoOffset: true }}
             selectableActions={ (onClick || href) && {
                 selectableActionId: id + '-input',
                 onClickAction: (e) => this.handleClick(e),
@@ -129,6 +128,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
           >
             {iconImg && <img className="catalog-tile-pf-icon" src={iconImg} alt={iconAlt} />}
             {!iconImg && (iconClass || icon) && <span className={`catalog-tile-pf-icon ${iconClass}`}>{icon}</span>}
+            {badges.length > 0 && this.renderBadges(badges)}
           </CardHeader>
         )}
         <CardTitle className="catalog-tile-pf-header">
