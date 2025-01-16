@@ -14,6 +14,7 @@
 
   > a {
     color: var( --pf-t--global--text--color--regular);
+    text-decoration: none;
     display: inline-block;
     font-size: 13px;
     padding: 3px 6px 3px 15px;
@@ -23,7 +24,7 @@
 
     &:hover,
     &:focus {
-      color: var(--pf-t--global--text--color--brand--hover);
+      background-color: var(--pf-t--global--background--color--action--plain--hover);
       text-decoration: none;
     }
 

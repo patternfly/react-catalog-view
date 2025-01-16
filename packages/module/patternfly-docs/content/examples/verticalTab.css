@@ -18,6 +18,7 @@
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a {
   color: var(--pf-t--global--text--color--regular);
+  text-decoration: none;
   display: inline-block;
   font-size: var(--pf-t--global--font--size--body--default);
   padding-block: var(--pf-t--global--spacer--xs);
@@ -30,7 +31,6 @@
   margin-inline-start: var(--pf-t--global--spacer--md);
 }
 .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a:hover, .ws-react-e-vertical-tabs .vertical-tabs-pf-tab > a:focus {
-  color: var(--pf-t--global--text--color--regular);
   background-color: var(--pf-t--global--background--color--action--plain--hover);
   text-decoration: none;
 }
