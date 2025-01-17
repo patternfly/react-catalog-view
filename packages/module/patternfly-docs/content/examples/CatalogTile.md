@@ -94,7 +94,6 @@ import pfLogo6 from './pfLogo6.svg';
       <CogIcon />
     </CatalogTileBadge>
   ]}
-  onClick={()=>console.log("hi")}
   href="http://patternfly.org/v4"
   title="Patternfly-React"
   vendor="provided by Red Hat"
