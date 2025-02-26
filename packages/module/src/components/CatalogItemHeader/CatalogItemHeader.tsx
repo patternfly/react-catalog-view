@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Content, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 
 export interface CatalogItemHeaderProps extends Omit<React.HTMLProps<HTMLElement>, 'title'> {
@@ -26,8 +27,8 @@ export const CatalogItemHeader: React.FunctionComponent<CatalogItemHeaderProps> 
     {iconImg && <img className="catalog-item-header-pf-icon" src={iconImg} alt="" />}
     {!iconImg && iconClass && <span className={`catalog-item-header-pf-icon ${iconClass}`} />}
     <div className="catalog-item-header-pf-text">
-      <h1 className="catalog-item-header-pf-title">{title}</h1>
-      {vendor && <h5 className="catalog-item-header-pf-subtitle">{vendor}</h5>}
+      <Title headingLevel="h1" className="catalog-item-header-pf-title">{title}</Title>
+      {vendor && <Content component="p" className="catalog-item-header-pf-subtitle">{vendor}</Content>}
     </div>
   </header>
 );
