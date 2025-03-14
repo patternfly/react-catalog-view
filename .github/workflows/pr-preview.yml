@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '18'
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: yarn-cache
         name: Load npm deps from cache
         with:
@@ -40,7 +40,7 @@ jobs:
         if: always()
       - run: yarn build
         name: Build component groups
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: docs-cache
         name: Load webpack cache
         with:
