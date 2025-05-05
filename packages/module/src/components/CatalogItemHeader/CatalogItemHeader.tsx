@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { HTMLProps, ReactNode, FunctionComponent } from 'react';
 import { Content, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 
-export interface CatalogItemHeaderProps extends Omit<React.HTMLProps<HTMLElement>, 'title'> {
+export interface CatalogItemHeaderProps extends Omit<HTMLProps<HTMLElement>, 'title'> {
   /** Additional css classes */
   className?: string;
   /** URL of an image for the item's icon */
@@ -10,12 +10,12 @@ export interface CatalogItemHeaderProps extends Omit<React.HTMLProps<HTMLElement
   /** Class for the image when an icon is to be used (exclusive from iconImg) */
   iconClass?: string;
   /** Tile for the catalog item */
-  title: string | React.ReactNode;
+  title: string | ReactNode;
   /** Vendor for the catalog item */
-  vendor?: string | React.ReactNode;
+  vendor?: string | ReactNode;
 }
 
-export const CatalogItemHeader: React.FunctionComponent<CatalogItemHeaderProps> = ({
+export const CatalogItemHeader: FunctionComponent<CatalogItemHeaderProps> = ({
   className = '',
   iconImg = null,
   iconClass = null,

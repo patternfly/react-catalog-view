@@ -11,19 +11,21 @@ import { VerticalTabs, VerticalTabsTab } from '@patternfly/react-catalog-view-ex
 import './verticalTab.css';
 
 ## Introduction
+
 Note: Vertical tabs lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
 
 ## Examples
+
 ### Basic
+
 ```js
-import React from 'react';
 import { VerticalTabs, VerticalTabsTab } from '@patternfly/react-catalog-view-extension';
 
 class MockVerticalTabsExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = { activeTabId: 'all' };
-    this.onActivateTab = id => {
+    this.onActivateTab = (id) => {
       this.setState({ activeTabId: id });
     };
   }
@@ -35,7 +37,7 @@ class MockVerticalTabsExample extends React.Component {
     const topLevelIds = ['all', 'one', 'two', 'three', 'four', 'five', 'six', 'seven'];
 
     const renderTab = (id, title, children, props) => {
-      const childIds = React.Children.map(children, child => child.props.id);
+      const childIds = React.Children.map(children, (child) => child.props.id);
 
       return (
         <VerticalTabsTab
@@ -62,9 +64,9 @@ class MockVerticalTabsExample extends React.Component {
         {renderTab('all', 'All', null, { shown: true })}
         {renderTab('one', 'Tab One', [
           renderTab('one-one', 'Tab One-One', [
-            renderTab('one-one-one', 'About Modal', null, {href: "../components/about-modal"}),
-            renderTab('one-one-two', 'Accordion', null, {href: "../components/accordion"}),
-            renderTab('one-one-three', 'Redhat', null, {href: "http://www.redhat.com"})
+            renderTab('one-one-one', 'About Modal', null, { href: '../components/about-modal' }),
+            renderTab('one-one-two', 'Accordion', null, { href: '../components/accordion' }),
+            renderTab('one-one-three', 'Redhat', null, { href: 'http://www.redhat.com' })
           ]),
           renderTab('one-two', 'Tab One-Two', [
             renderTab('one-two-one', 'Tab One-Two-One'),

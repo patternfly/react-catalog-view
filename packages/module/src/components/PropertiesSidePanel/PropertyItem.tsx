@@ -1,18 +1,18 @@
-import * as React from 'react';
+import type { HTMLProps, ReactNode, FunctionComponent } from 'react';
 import { css } from '@patternfly/react-styles';
 
 import { Content, ContentVariants } from '@patternfly/react-core';
 
-export interface PropertyItemProps extends Omit<React.HTMLProps<HTMLDivElement>, 'label' | 'value'> {
+export interface PropertyItemProps extends Omit<HTMLProps<HTMLDivElement>, 'label' | 'value'> {
   /** Additional css classes for the Property Item */
   className?: string;
   /** Label for the property */
-  label: string | React.ReactNode;
+  label: string | ReactNode;
   /** Value of the property */
-  value: string | React.ReactNode;
+  value: string | ReactNode;
 }
 
-export const PropertyItem: React.FunctionComponent<PropertyItemProps> = ({
+export const PropertyItem: FunctionComponent<PropertyItemProps> = ({
   className = '',
   label,
   value = null,

@@ -1,9 +1,9 @@
-import * as React from 'react';
+import type { HTMLProps, ReactNode, FunctionComponent } from 'react';
 import { css } from '@patternfly/react-styles';
 
-export interface VerticalTabsProps extends React.HTMLProps<HTMLUListElement> {
+export interface VerticalTabsProps extends HTMLProps<HTMLUListElement> {
   /** Children nodes */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /** Additional css classes */
   className?: string;
   /** Flag to restrict shown tabs to active tabs, their parents, their siblings, and direct children */
@@ -12,7 +12,7 @@ export interface VerticalTabsProps extends React.HTMLProps<HTMLUListElement> {
   activeTab?: boolean;
 }
 
-export const VerticalTabs: React.FunctionComponent<VerticalTabsProps> = ({
+export const VerticalTabs: FunctionComponent<VerticalTabsProps> = ({
   children = null,
   className = '',
   restrictTabs = false,

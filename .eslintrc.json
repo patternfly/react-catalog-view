@@ -94,6 +94,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
     "spaced-comment": "error",
-    "use-isnan": "error"
+    "use-isnan": "error",
+    "react/react-in-jsx-scope": "off"
   }
 }

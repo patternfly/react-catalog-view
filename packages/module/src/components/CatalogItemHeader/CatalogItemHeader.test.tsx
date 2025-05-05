@@ -1,5 +1,4 @@
 import { CatalogItemHeader } from './CatalogItemHeader';
-import React from 'react';
 import { render } from '@testing-library/react';
 
 test('simple catalog item header', () => {

@@ -1,17 +1,17 @@
-import * as React from 'react';
+import type { HTMLProps, ReactNode, SyntheticEvent, FunctionComponent } from 'react';
 import { Button } from '@patternfly/react-core';
 import formStyles from '@patternfly/react-styles/css/components/Form/form';
 import { css } from '@patternfly/react-styles';
 
 import { childrenToArray } from '../../helpers/util';
 
-export interface FilterSidePanelCategoryProps extends Omit<React.HTMLProps<HTMLFormElement>, 'title'> {
+export interface FilterSidePanelCategoryProps extends Omit<HTMLProps<HTMLFormElement>, 'title'> {
   /** Children nodes */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /** Additional css classes for the Filter Side Panel Category */
   className?: string;
   /** Title for the category */
-  title?: string | React.ReactNode;
+  title?: string | ReactNode;
   /** Number of items (max) to show before adding Show More link button */
   maxShowCount?: number;
   /** Leeway to add to maxShowCount, minimum X for the 'Show X more' */
@@ -19,14 +19,14 @@ export interface FilterSidePanelCategoryProps extends Omit<React.HTMLProps<HTMLF
   /** Flag to show all items (ie. set to true after Show X more link is clicked) */
   showAll?: boolean;
   /** Callback function when the Show/Hide link button is clicked */
-  onShowAllToggle?: (event: React.SyntheticEvent<HTMLElement>) => void;
+  onShowAllToggle?: (event: SyntheticEvent<HTMLElement>) => void;
   /** Text for the link to show all items, default 'Show <x> more' */
   showText?: string;
   /** Text for the link to hide overflow items, default 'Show less' */
   hideText?: string;
 }
 
-export const FilterSidePanelCategory: React.FunctionComponent<FilterSidePanelCategoryProps> = ({
+export const FilterSidePanelCategory: FunctionComponent<FilterSidePanelCategoryProps> = ({
   children = null,
   className = '',
   title = null,

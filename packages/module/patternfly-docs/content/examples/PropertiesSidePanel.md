@@ -14,13 +14,14 @@ import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
 import './propertiesSidePanel.css';
 
 ## Introduction
+
 Note: PropertiesSidePanel lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
 
 ## Examples
 
 ### Properties side panel with property items
+
 ```js
-import React from 'react';
 import { PropertiesSidePanel, PropertyItem } from '@patternfly/react-catalog-view-extension';
 import OkIcon from '@patternfly/react-icons/dist/esm/icons/ok-icon';
 import { Icon } from '@patternfly/react-core';
@@ -67,5 +68,5 @@ import GlobeIcon from '@patternfly/react-icons/dist/esm/icons/globe-icon';
     }
   />
   <PropertyItem label="Support" value={<a href="#">Red Hat</a>} />
-</PropertiesSidePanel>
+</PropertiesSidePanel>;
 ```

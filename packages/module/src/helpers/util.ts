@@ -1,4 +1,5 @@
-import * as React from 'react';
+import type { ReactNode } from 'react';
+import { Children } from 'react';
 
 /**
  * @param {string} prefix - String to prefix unique ID with
@@ -17,5 +18,5 @@ export function getUniqueId(prefix = 'pf') {
  *
  * @param {React.ReactNode} children - Child react node
  */
-export const childrenToArray = (children: React.ReactNode) =>
-  children && React.Children.count(children) > 0 && React.Children.toArray(children);
+export const childrenToArray = (children: ReactNode) =>
+  children && Children.count(children) > 0 && Children.toArray(children);

@@ -1,13 +1,20 @@
-import * as React from 'react';
+import type {
+  HTMLProps,
+  ReactNode,
+  ElementType,
+  ComponentType,
+  FunctionComponent,
+  SyntheticEvent,
+} from 'react';
 import { css } from '@patternfly/react-styles';
 
-export interface VerticalTabsTabProps extends Omit<React.HTMLProps<HTMLLIElement>, 'title'> {
+export interface VerticalTabsTabProps extends Omit<HTMLProps<HTMLLIElement>, 'title'> {
   /** Child tab nodes (VerticalTabsTab's) */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /** Additional css classes */
   className?: string;
   /** Title for the tab */
-  title?: string | React.ReactNode;
+  title?: string | ReactNode;
   /** Title wrap style */
   wrapStyle?: 'wrap' | 'truncate' | 'nowrap';
   /** Flag if this is the active tab */
@@ -21,10 +28,10 @@ export interface VerticalTabsTabProps extends Omit<React.HTMLProps<HTMLLIElement
   /** HREF location */
   href?: string;
   /** Sets the base component to render. defaults to a */
-  component?: React.ElementType<any> | React.ComponentType<any>;
+  component?: ElementType<any> | ComponentType<any>;
 }
 
-export const VerticalTabsTab: React.FunctionComponent<VerticalTabsTabProps> = ({
+export const VerticalTabsTab: FunctionComponent<VerticalTabsTabProps> = ({
   children = null,
   className = '',
   title = null,
@@ -44,7 +51,7 @@ export const VerticalTabsTab: React.FunctionComponent<VerticalTabsTabProps> = ({
     truncate: wrapStyle === 'truncate'
   });
 
-  const handleActivate = (e: React.SyntheticEvent<HTMLElement>) => {
+  const handleActivate = (e: SyntheticEvent<HTMLElement>) => {
     e.preventDefault();
     if (onActivate) {
       onActivate();
