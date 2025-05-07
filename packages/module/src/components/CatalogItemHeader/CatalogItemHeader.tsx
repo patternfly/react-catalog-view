@@ -1,4 +1,4 @@
-import type { HTMLProps, ReactNode, FunctionComponent } from 'react';
+import type { HTMLProps, FunctionComponent } from 'react';
 import { Content, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 
@@ -10,9 +10,9 @@ export interface CatalogItemHeaderProps extends Omit<HTMLProps<HTMLElement>, 'ti
   /** Class for the image when an icon is to be used (exclusive from iconImg) */
   iconClass?: string;
   /** Tile for the catalog item */
-  title: string | ReactNode;
+  title: string | React.ReactNode;
   /** Vendor for the catalog item */
-  vendor?: string | ReactNode;
+  vendor?: string | React.ReactNode;
 }
 
 export const CatalogItemHeader: FunctionComponent<CatalogItemHeaderProps> = ({
@@ -27,8 +27,14 @@ export const CatalogItemHeader: FunctionComponent<CatalogItemHeaderProps> = ({
     {iconImg && <img className="catalog-item-header-pf-icon" src={iconImg} alt="" />}
     {!iconImg && iconClass && <span className={`catalog-item-header-pf-icon ${iconClass}`} />}
     <div className="catalog-item-header-pf-text">
-      <Title headingLevel="h1" className="catalog-item-header-pf-title">{title}</Title>
-      {vendor && <Content component="p" className="catalog-item-header-pf-subtitle">{vendor}</Content>}
+      <Title headingLevel="h1" className="catalog-item-header-pf-title">
+        {title}
+      </Title>
+      {vendor && (
+        <Content component="p" className="catalog-item-header-pf-subtitle">
+          {vendor}
+        </Content>
+      )}
     </div>
   </header>
 );

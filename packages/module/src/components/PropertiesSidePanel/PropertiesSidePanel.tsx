@@ -1,11 +1,11 @@
-import type { HTMLProps, ReactNode, FunctionComponent } from 'react';
+import type { FunctionComponent } from 'react';
 import { css } from '@patternfly/react-styles';
 
-export interface PropertySidePanelProps extends HTMLProps<HTMLDivElement> {
+export interface PropertySidePanelProps extends React.HTMLProps<HTMLDivElement> {
   /** Additional css classes for the Property Item */
   className?: string;
   /** Children, should be PropertyItem items plus any action buttons, etc. */
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
 export const PropertiesSidePanel: FunctionComponent<PropertySidePanelProps> = ({

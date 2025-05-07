@@ -1,11 +1,11 @@
-import type { HTMLProps, ReactNode, FunctionComponent } from 'react';
+import type { FunctionComponent } from 'react';
 import { Fragment } from 'react';
 import { Tooltip } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 
-export interface CatalogTileBadgeProps extends Omit<HTMLProps<HTMLElement>, 'title'> {
+export interface CatalogTileBadgeProps extends Omit<React.HTMLProps<HTMLElement>, 'title'> {
   /** Children (typically an Icon) */
-  children?: ReactNode;
+  children?: React.ReactNode;
   /** Additional css classes */
   className?: string;
   /** Id (was necessary for PF3 tooltip, but not for the PF4 one; keeping prop in case people still want it) */
@@ -25,14 +25,14 @@ export const CatalogTileBadge: FunctionComponent<CatalogTileBadgeProps> = ({
 
   if (title) {
     return (
-      (<Fragment>
+      <Fragment>
         <Tooltip id={id} content={title}>
           <span className={classes} {...props}>
             {children}
             <span className="pf-v6-screen-reader">{title}</span>
           </span>
         </Tooltip>
-      </Fragment>)
+      </Fragment>
     );
   }
   return (

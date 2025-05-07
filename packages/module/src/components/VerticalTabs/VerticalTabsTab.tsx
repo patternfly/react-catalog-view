@@ -1,20 +1,13 @@
-import type {
-  HTMLProps,
-  ReactNode,
-  ElementType,
-  ComponentType,
-  FunctionComponent,
-  SyntheticEvent,
-} from 'react';
+import type { FunctionComponent, SyntheticEvent } from 'react';
 import { css } from '@patternfly/react-styles';
 
-export interface VerticalTabsTabProps extends Omit<HTMLProps<HTMLLIElement>, 'title'> {
+export interface VerticalTabsTabProps extends Omit<React.HTMLProps<HTMLLIElement>, 'title'> {
   /** Child tab nodes (VerticalTabsTab's) */
-  children?: ReactNode;
+  children?: React.ReactNode;
   /** Additional css classes */
   className?: string;
   /** Title for the tab */
-  title?: string | ReactNode;
+  title?: string | React.ReactNode;
   /** Title wrap style */
   wrapStyle?: 'wrap' | 'truncate' | 'nowrap';
   /** Flag if this is the active tab */
@@ -28,7 +21,7 @@ export interface VerticalTabsTabProps extends Omit<HTMLProps<HTMLLIElement>, 'ti
   /** HREF location */
   href?: string;
   /** Sets the base component to render. defaults to a */
-  component?: ElementType<any> | ComponentType<any>;
+  component?: React.ElementType<any> | React.ComponentType<any>;
 }
 
 export const VerticalTabsTab: FunctionComponent<VerticalTabsTabProps> = ({
@@ -63,7 +56,7 @@ export const VerticalTabsTab: FunctionComponent<VerticalTabsTabProps> = ({
       {Component ? (
         <Component className={linkClasses} />
       ) : (
-        <a className={linkClasses} onClick={e => handleActivate(e)} href={href}>
+        <a className={linkClasses} onClick={(e) => handleActivate(e)} href={href}>
           {title}
         </a>
       )}
