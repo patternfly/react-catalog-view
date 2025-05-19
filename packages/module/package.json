@@ -44,12 +44,12 @@
     "@patternfly/react-styles": "^6.1.0"
   },
   "peerDependencies": {
-    "react": "^17 || ^18",
-    "react-dom": "^17 || ^18"
+    "react": "^17 || ^18 || ^19",
+    "react-dom": "^17 || ^18 || ^19"
   },
   "devDependencies": {
     "@patternfly/patternfly": "^6.1.0",
-    "@patternfly/documentation-framework": "6.5.14",
+    "@patternfly/documentation-framework": "6.8.2",
     "@patternfly/react-table": "^6.1.0",
     "@patternfly/react-code-editor": "^6.1.0",
     "@octokit/rest": "^18.0.0",

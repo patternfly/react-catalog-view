@@ -18,9 +18,10 @@ import './catalogTile.css';
 Note: Catalog tile lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!
 
 ## Examples
+
 ### Basic featured tile
+
 ```js
-import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo6 from './pfLogo6.svg';
@@ -43,12 +44,12 @@ import '../../../../dist/css/react-catalog-view-extension.css';
     'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +
     'This has changed from PatternFly 3.'
   }
-/>
+/>;
 ```
 
 ### Basic with footer
+
 ```js
-import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
@@ -72,15 +73,15 @@ import pfLogo6 from './pfLogo6.svg';
   }
   footer={
     <span>
-      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v6-global--success-color--100)'}} /> Enabled
+      <OutlinedCheckCircleIcon style={{ color: 'var(--pf-v6-global--success-color--100)' }} /> Enabled
     </span>
   }
-/>
+/>;
 ```
 
 ### Link variant
+
 ```js
-import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo6 from './pfLogo6.svg';
@@ -102,12 +103,12 @@ import pfLogo6 from './pfLogo6.svg';
     'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +
     'This has changed from PatternFly 3.'
   }
-/>
+/>;
 ```
 
 ### With multiple icon badges
+
 ```js
-import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
@@ -122,7 +123,7 @@ import pfLogo6 from './pfLogo6.svg';
       <CogIcon />
     </CatalogTileBadge>,
     <CatalogTileBadge title="USDA Approved">
-      <OutlinedCheckCircleIcon style={{color: 'var(--pf-v6-global--success-color--100)'}} />
+      <OutlinedCheckCircleIcon style={{ color: 'var(--pf-v6-global--success-color--100)' }} />
     </CatalogTileBadge>
   ]}
   title="Patternfly-React"
@@ -132,12 +133,12 @@ import pfLogo6 from './pfLogo6.svg';
     'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +
     'This has changed from PatternFly 3.'
   }
-/>
+/>;
 ```
 
 ### With text badge
+
 ```js
-import React from 'react';
 import { CatalogTile } from '@patternfly/react-catalog-view-extension';
 import pfLogo6 from './pfLogo6.svg';
 
@@ -145,9 +146,7 @@ import pfLogo6 from './pfLogo6.svg';
   id="text-badge"
   iconImg={pfLogo6}
   iconAlt="PatternFly logo"
-  badges={[
-    'Community'
-  ]}
+  badges={['Community']}
   title="Patternfly-React"
   vendor="provided by Red Hat"
   description={
@@ -155,12 +154,12 @@ import pfLogo6 from './pfLogo6.svg';
     'Three lines is the default for cards without a footer. Cards with a footer are truncated after one line. Truncation function use is deprecated; please pass in a maxDescriptionLength of -1 to override it. ' +
     'This has changed from PatternFly 3.'
   }
-/>
+/>;
 ```
 
 ### With children instead of description
+
 ```js
-import React from 'react';
 import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-extension';
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import pfLogo6 from './pfLogo6.svg';
@@ -178,10 +177,9 @@ import pfLogo6 from './pfLogo6.svg';
   title="Patternfly-React"
   vendor="provided by Red Hat"
 >
-  This is a very, very long stetch of child text that should be not be truncated
-  and illustrates how Flyers can add longer content to PatternFly 4 catalog tiles
-  using the children prop. Cards usually truncate descriptions at three lines.
-  Cards with a footer are truncated after one line. This has changed from PatternFly 3.
-  Children can be of any length.
-</CatalogTile>
+  This is a very, very long stetch of child text that should be not be truncated and illustrates how Flyers can add
+  longer content to PatternFly 4 catalog tiles using the children prop. Cards usually truncate descriptions at three
+  lines. Cards with a footer are truncated after one line. This has changed from PatternFly 3. Children can be of any
+  length.
+</CatalogTile>;
 ```

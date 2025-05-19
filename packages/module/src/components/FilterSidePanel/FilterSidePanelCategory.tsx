@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FunctionComponent } from 'react';
 import { Button } from '@patternfly/react-core';
 import formStyles from '@patternfly/react-styles/css/components/Form/form';
 import { css } from '@patternfly/react-styles';
@@ -26,7 +26,7 @@ export interface FilterSidePanelCategoryProps extends Omit<React.HTMLProps<HTMLF
   hideText?: string;
 }
 
-export const FilterSidePanelCategory: React.FunctionComponent<FilterSidePanelCategoryProps> = ({
+export const FilterSidePanelCategory: FunctionComponent<FilterSidePanelCategoryProps> = ({
   children = null,
   className = '',
   title = null,

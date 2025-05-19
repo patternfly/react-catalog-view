@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FunctionComponent } from 'react';
 import { css } from '@patternfly/react-styles';
 
 import { Content, ContentVariants } from '@patternfly/react-core';
@@ -12,7 +12,7 @@ export interface PropertyItemProps extends Omit<React.HTMLProps<HTMLDivElement>,
   value: string | React.ReactNode;
 }
 
-export const PropertyItem: React.FunctionComponent<PropertyItemProps> = ({
+export const PropertyItem: FunctionComponent<PropertyItemProps> = ({
   className = '',
   label,
   value = null,

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FunctionComponent } from 'react';
 import { css } from '@patternfly/react-styles';
 
 export interface FilterSidePanelProps extends React.HTMLProps<HTMLDivElement> {
@@ -8,7 +8,7 @@ export interface FilterSidePanelProps extends React.HTMLProps<HTMLDivElement> {
   className?: string;
 }
 
-export const FilterSidePanel: React.FunctionComponent<FilterSidePanelProps> = ({
+export const FilterSidePanel: FunctionComponent<FilterSidePanelProps> = ({
   children = null,
   className = '',
   ...props

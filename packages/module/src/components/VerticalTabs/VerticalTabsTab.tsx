@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FunctionComponent, SyntheticEvent } from 'react';
 import { css } from '@patternfly/react-styles';
 
 export interface VerticalTabsTabProps extends Omit<React.HTMLProps<HTMLLIElement>, 'title'> {
@@ -24,7 +24,7 @@ export interface VerticalTabsTabProps extends Omit<React.HTMLProps<HTMLLIElement
   component?: React.ElementType<any> | React.ComponentType<any>;
 }
 
-export const VerticalTabsTab: React.FunctionComponent<VerticalTabsTabProps> = ({
+export const VerticalTabsTab: FunctionComponent<VerticalTabsTabProps> = ({
   children = null,
   className = '',
   title = null,
@@ -44,7 +44,7 @@ export const VerticalTabsTab: React.FunctionComponent<VerticalTabsTabProps> = ({
     truncate: wrapStyle === 'truncate'
   });
 
-  const handleActivate = (e: React.SyntheticEvent<HTMLElement>) => {
+  const handleActivate = (e: SyntheticEvent<HTMLElement>) => {
     e.preventDefault();
     if (onActivate) {
       onActivate();
@@ -56,7 +56,7 @@ export const VerticalTabsTab: React.FunctionComponent<VerticalTabsTabProps> = ({
       {Component ? (
         <Component className={linkClasses} />
       ) : (
-        <a className={linkClasses} onClick={e => handleActivate(e)} href={href}>
+        <a className={linkClasses} onClick={(e) => handleActivate(e)} href={href}>
           {title}
         </a>
       )}

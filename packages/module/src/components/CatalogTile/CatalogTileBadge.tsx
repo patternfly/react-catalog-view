@@ -1,4 +1,5 @@
-import * as React from 'react';
+import type { FunctionComponent } from 'react';
+import { Fragment } from 'react';
 import { Tooltip } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 
@@ -13,7 +14,7 @@ export interface CatalogTileBadgeProps extends Omit<React.HTMLProps<HTMLElement>
   title?: string;
 }
 
-export const CatalogTileBadge: React.FunctionComponent<CatalogTileBadgeProps> = ({
+export const CatalogTileBadge: FunctionComponent<CatalogTileBadgeProps> = ({
   children = null,
   className = '',
   id = null,
@@ -24,14 +25,14 @@ export const CatalogTileBadge: React.FunctionComponent<CatalogTileBadgeProps> = 
 
   if (title) {
     return (
-      <React.Fragment>
+      <Fragment>
         <Tooltip id={id} content={title}>
           <span className={classes} {...props}>
             {children}
             <span className="pf-v6-screen-reader">{title}</span>
           </span>
         </Tooltip>
-      </React.Fragment>
+      </Fragment>
     );
   }
   return (

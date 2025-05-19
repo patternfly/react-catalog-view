@@ -1,4 +1,5 @@
-import * as React from 'react';
+import type { FunctionComponent } from 'react';
+import { Fragment } from 'react';
 import { css } from '@patternfly/react-styles';
 import { Checkbox } from '@patternfly/react-core';
 
@@ -21,7 +22,7 @@ export interface FilterSidePanelCategoryItemProps extends React.HTMLProps<HTMLDi
   title?: string;
 }
 
-export const FilterSidePanelCategoryItem: React.FunctionComponent<FilterSidePanelCategoryItemProps> = ({
+export const FilterSidePanelCategoryItem: FunctionComponent<FilterSidePanelCategoryItemProps> = ({
   children = null,
   className = '',
   icon = null,
@@ -33,11 +34,11 @@ export const FilterSidePanelCategoryItem: React.FunctionComponent<FilterSidePane
 }: FilterSidePanelCategoryItemProps) => {
   const classes = css('filter-panel-pf-category-item', className);
   const label = (
-    <React.Fragment>
+    <Fragment>
       {icon && <span className="item-icon">{icon}</span>}
       {children}
       {Number.isInteger(count) && <span className="item-count">{`(${count})`}</span>}
-    </React.Fragment>
+    </Fragment>
   );
   return (
     <div className={classes} {...props}>

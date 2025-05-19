@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FunctionComponent } from 'react';
 import { css } from '@patternfly/react-styles';
 
 export interface VerticalTabsProps extends React.HTMLProps<HTMLUListElement> {
@@ -12,7 +12,7 @@ export interface VerticalTabsProps extends React.HTMLProps<HTMLUListElement> {
   activeTab?: boolean;
 }
 
-export const VerticalTabs: React.FunctionComponent<VerticalTabsProps> = ({
+export const VerticalTabs: FunctionComponent<VerticalTabsProps> = ({
   children = null,
   className = '',
   restrictTabs = false,
