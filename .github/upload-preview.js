@@ -20,7 +20,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `${repo}-${prnum ? `pr-catalog-view-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `catalog-view-${prnum ? `pr-catalog-view-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
   case 'coverage':
