@@ -7,13 +7,16 @@ source: react
 
 import FilterIcon from '@patternfly/react-icons/dist/esm/icons/filter-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import {
 CatalogTile,
 FilterSidePanel,
 FilterSidePanelCategory,
 FilterSidePanelCategoryItem,
 PropertiesSidePanel,
-PropertyItem
+PropertyItem,
+VerticalTabs,
+VerticalTabsTab
 } from '@patternfly/react-catalog-view-extension';
 import pfLogo6 from './pfLogo6.svg';
 
@@ -62,17 +65,24 @@ import {
   TextContent,
   Masthead,
   TextVariants,
-  Icon
+  Icon,
+  EmptyState,
+  EmptyStateBody,
+  EmptyStateActions,
+  EmptyStateFooter
 } from '@patternfly/react-core';
 import FilterIcon from '@patternfly/react-icons/dist/esm/icons/filter-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import {
   CatalogTile,
   FilterSidePanel,
   FilterSidePanelCategory,
   FilterSidePanelCategoryItem,
   PropertiesSidePanel,
-  PropertyItem
+  PropertyItem,
+  VerticalTabs,
+  VerticalTabsTab
 } from '@patternfly/react-catalog-view-extension';
 import pfLogo6 from './pfLogo6.svg';
 
@@ -83,6 +93,7 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
   const [perPage, setPerPage] = React.useState(10);
   const [isDrawerExpanded, setIsDrawerExpanded] = React.useState(false);
   const [selectedItem, setSelectedItem] = React.useState<any>(null);
+  const [activeTab, setActiveTab] = React.useState('all');
 
   const handleSearchChange = (event: React.FormEvent<HTMLInputElement>, value: string) => {
     setSearchValue(value);
@@ -108,6 +119,11 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
     setSelectedItem(null);
   };
 
+  const handleTabActivate = (tabId: string) => {
+    setActiveTab(tabId);
+    setCurrentPage(1); // Reset to first page when changing tabs
+  };
+
   const catalogItems = [
     {
       id: '1',
@@ -121,7 +137,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       featured: true,
       href: '#',
       version: '4.15.2',
-      lastUpdated: '2024-01-15'
+      lastUpdated: '2024-01-15',
+      category: 'platform'
     },
     {
       id: '2',
@@ -135,7 +152,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       featured: false,
       href: '#',
       version: '1.8.3',
-      lastUpdated: '2024-01-10'
+      lastUpdated: '2024-01-10',
+      category: 'operators'
     },
     {
       id: '3',
@@ -149,7 +167,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       featured: false,
       href: '#',
       version: '2.16.1',
-      lastUpdated: '2024-01-08'
+      lastUpdated: '2024-01-08',
+      category: 'automation'
     },
     {
       id: '4',
@@ -163,7 +182,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       featured: false,
       href: '#',
       version: '9.3',
-      lastUpdated: '2024-01-12'
+      lastUpdated: '2024-01-12',
+      category: 'platform'
     },
     {
       id: '5',
@@ -177,7 +197,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       featured: false,
       href: '#',
       version: '7.4.10',
-      lastUpdated: '2024-01-05'
+      lastUpdated: '2024-01-05',
+      category: 'applications'
     },
     {
       id: '6',
@@ -191,7 +212,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       featured: false,
       href: '#',
       version: '3.9.2',
-      lastUpdated: '2024-01-18'
+      lastUpdated: '2024-01-18',
+      category: 'platform'
     },
     {
       id: '7',
@@ -203,7 +225,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       badge: 'Community',
       badgeColor: 'grey',
       featured: false,
-      href: '#'
+      href: '#',
+      category: 'messaging'
     },
     {
       id: '8',
@@ -215,7 +238,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       badge: 'Community',
       badgeColor: 'grey',
       featured: false,
-      href: '#'
+      href: '#',
+      category: 'integration'
     },
     {
       id: '9',
@@ -227,7 +251,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       badge: 'Community',
       badgeColor: 'grey',
       featured: false,
-      href: '#'
+      href: '#',
+      category: 'data'
     },
     {
       id: '10',
@@ -235,11 +260,12 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       vendor: 'Provided by Red Hat',
       description:
         'This is a very, very long stretch of child text that should not be truncated and illustrates how the component handles long descriptions.',
-      iconImg: 'http://localhost:3845/assets/b07021ef211d4a5b7c1e291a39e47c2089a52f4a.svg',
+      iconImg: pfLogo6,
       badge: 'Community',
       badgeColor: 'grey',
       featured: false,
-      href: '#'
+      href: '#',
+      category: 'security'
     },
     {
       id: '11',
@@ -251,7 +277,8 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       badge: 'Community',
       badgeColor: 'grey',
       featured: false,
-      href: '#'
+      href: '#',
+      category: 'api'
     },
     {
       id: '12',
@@ -263,12 +290,22 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
       badge: 'Community',
       badgeColor: 'grey',
       featured: false,
-      href: '#'
+      href: '#',
+      category: 'development'
     }
   ];
 
-  // Calculate counts for each filter option
+  // Get items for the current tab
+  const getItemsForTab = (tabId: string) => {
+    if (tabId === 'all') {
+      return catalogItems;
+    }
+    return catalogItems.filter(item => item.category === tabId);
+  };
+
+  // Calculate counts for each filter option based on current tab
   const getFilterCounts = () => {
+    const currentItems = getItemsForTab(activeTab);
     const counts = {
       vendor: {},
       badge: {},
@@ -276,7 +313,7 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
     };
 
     // Count vendor options
-    catalogItems.forEach((item) => {
+    currentItems.forEach((item) => {
       if (item.vendor.includes('Red Hat')) {
         counts.vendor['red-hat'] = (counts.vendor['red-hat'] || 0) + 1;
       }
@@ -286,13 +323,13 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
     });
 
     // Count badge options
-    catalogItems.forEach((item) => {
+    currentItems.forEach((item) => {
       const badgeLower = item.badge.toLowerCase();
       counts.badge[badgeLower] = (counts.badge[badgeLower] || 0) + 1;
     });
 
     // Count featured options
-    catalogItems.forEach((item) => {
+    currentItems.forEach((item) => {
       if (item.featured) {
         counts.featured['featured'] = (counts.featured['featured'] || 0) + 1;
       } else {
@@ -366,6 +403,65 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
     />
   );
 
+  // Filter items based on search and selected filters
+  const getFilteredItems = () => {
+    const currentItems = getItemsForTab(activeTab);
+    
+    return currentItems.filter((item) => {
+      // Search filter
+      if (searchValue && typeof searchValue === 'string') {
+        const searchLower = searchValue.toLowerCase();
+        const matchesSearch =
+          item.title.toLowerCase().includes(searchLower) ||
+          item.vendor.toLowerCase().includes(searchLower) ||
+          item.description.toLowerCase().includes(searchLower);
+        if (!matchesSearch) return false;
+      }
+
+      // Filter by selected filters
+      if (selectedFilters.length > 0) {
+        // Group filters by category
+        const filtersByCategory = selectedFilters.reduce((acc, filterId) => {
+          const [category, value] = filterId.split(':');
+          if (!acc[category]) acc[category] = [];
+          acc[category].push(value);
+          return acc;
+        }, {} as Record<string, string[]>);
+
+        // Check if item matches any filter in each category (OR logic within categories)
+        const matchesFilters = Object.entries(filtersByCategory).every(([category, values]) => {
+          switch (category) {
+            case 'vendor':
+              return values.some((value) => {
+                if (value === 'red-hat') return item.vendor.includes('Red Hat');
+                if (value === 'community') return item.vendor.includes('Community');
+                return item.vendor === value;
+              });
+            case 'badge':
+              return values.some((value) => item.badge.toLowerCase() === value);
+            case 'featured':
+              return values.some((value) => {
+                if (value === 'featured') return item.featured === true;
+                if (value === 'not-featured') return item.featured === false;
+                return false;
+              });
+            default:
+              return false;
+          }
+        });
+
+        if (!matchesFilters) return false;
+      }
+      return true;
+    });
+  };
+
+  const filteredItems = getFilteredItems();
+  const paginatedItems = filteredItems.slice((currentPage - 1) * perPage, currentPage * perPage);
+
+  // Check if we should show empty state
+  const showEmptyState = filteredItems.length === 0;
+
   return (
     <Page masthead={<Masthead></Masthead>}>
       <PageSection>
@@ -383,61 +479,16 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
             </ToolbarGroup>
             <ToolbarGroup variant="action-group">
               <ToolbarItem>
-                <Button variant={ButtonVariant.primary}>Button</Button>
+                <Button variant={ButtonVariant.primary}>Primary action</Button>
               </ToolbarItem>
               <ToolbarItem>
-                <Button variant={ButtonVariant.secondary}>Button</Button>
+                <Button variant={ButtonVariant.secondary}>Secondary action</Button>
               </ToolbarItem>
             </ToolbarGroup>
             <ToolbarGroup variant="pagination" align={{ default: 'alignEnd' }}>
               <ToolbarItem>
                 <Pagination
-                  itemCount={
-                    catalogItems.filter((item) => {
-                      // Search filter
-                      if (searchValue && typeof searchValue === 'string') {
-                        const searchLower = searchValue.toLowerCase();
-                        const matchesSearch =
-                          item.title.toLowerCase().includes(searchLower) ||
-                          item.vendor.toLowerCase().includes(searchLower) ||
-                          item.description.toLowerCase().includes(searchLower);
-                        if (!matchesSearch) return false;
-                      }
-
-                      // Filter by selected filters
-                      if (selectedFilters.length > 0) {
-                        // Group filters by category
-                        const filtersByCategory = selectedFilters.reduce((acc, filterId) => {
-                          const [category, value] = filterId.split(':');
-                          if (!acc[category]) acc[category] = [];
-                          acc[category].push(value);
-                          return acc;
-                        }, {} as Record<string, string[]>);
-
-                        // Check if item matches any filter in each category (OR logic within categories)
-                        const matchesFilters = Object.entries(filtersByCategory).every(([category, values]) => {
-                          switch (category) {
-                            case 'vendor':
-                              return values.some((value) => item.vendor === value);
-                            case 'badge':
-                              return values.some((value) => item.badge.toLowerCase() === value);
-                            case 'featured':
-                              return values.some((value) => {
-                                if (value === 'featured') return item.featured === true;
-                                if (value === 'not-featured') return item.featured === false;
-                                return false;
-                              });
-                            default:
-                              return false;
-                          }
-                        });
-
-                        if (!matchesFilters) return false;
-                      }
-
-                      return true;
-                    }).length
-                  }
+                  itemCount={filteredItems.length}
                   page={currentPage}
                   perPage={perPage}
                   onSetPage={(_, page) => setCurrentPage(page)}
@@ -493,6 +544,44 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
               <PageSection>
                 <Split hasGutter>
                   <SplitItem isFilled={false} style={{ minWidth: '200px' }}>
+                    <VerticalTabs id="catalog-tabs" activeTab={true}>
+                      <VerticalTabsTab
+                        id="all"
+                        title="All Items"
+                        active={activeTab === 'all'}
+                        onActivate={() => handleTabActivate('all')}
+                      />
+                      <VerticalTabsTab
+                        id="platform"
+                        title="Platform"
+                        active={activeTab === 'platform'}
+                        onActivate={() => handleTabActivate('platform')}
+                      />
+                      <VerticalTabsTab
+                        id="applications"
+                        title="Applications"
+                        active={activeTab === 'applications'}
+                        onActivate={() => handleTabActivate('applications')}
+                      />
+                      <VerticalTabsTab
+                        id="operators"
+                        title="Operators"
+                        active={activeTab === 'operators'}
+                        onActivate={() => handleTabActivate('operators')}
+                      />
+                      <VerticalTabsTab
+                        id="automation"
+                        title="Automation"
+                        active={activeTab === 'automation'}
+                        onActivate={() => handleTabActivate('automation')}
+                      />
+                      <VerticalTabsTab
+                        id="security"
+                        title="Security"
+                        active={activeTab === 'security'}
+                        onActivate={() => handleTabActivate('security')}
+                      />
+                    </VerticalTabs>
                     <FilterSidePanel>
                       <Stack hasGutter>
                         {filterCategories.map((category) => (
@@ -520,62 +609,41 @@ export const CatalogViewDemo: React.FunctionComponent = () => {
                     </FilterSidePanel>
                   </SplitItem>
                   <SplitItem isFilled>
-                    <Grid hasGutter>
-                      {catalogItems
-                        .filter((item) => {
-                          // Search filter
-                          if (searchValue && typeof searchValue === 'string') {
-                            const searchLower = searchValue.toLowerCase();
-                            const matchesSearch =
-                              item.title.toLowerCase().includes(searchLower) ||
-                              item.vendor.toLowerCase().includes(searchLower) ||
-                              item.description.toLowerCase().includes(searchLower);
-                            if (!matchesSearch) return false;
-                          }
-
-                          // Filter by selected filters
-                          if (selectedFilters.length > 0) {
-                            // Group filters by category
-                            const filtersByCategory = selectedFilters.reduce((acc, filterId) => {
-                              const [category, value] = filterId.split(':');
-                              if (!acc[category]) acc[category] = [];
-                              acc[category].push(value);
-                              return acc;
-                            }, {} as Record<string, string[]>);
-
-                            // Check if item matches any filter in each category (OR logic within categories)
-                            const matchesFilters = Object.entries(filtersByCategory).every(([category, values]) => {
-                              switch (category) {
-                                case 'vendor':
-                                  return values.some((value) => {
-                                    if (value === 'red-hat') return item.vendor.includes('Red Hat');
-                                    if (value === 'community') return item.vendor.includes('Community');
-                                    return item.vendor === value;
-                                  });
-                                case 'badge':
-                                  return values.some((value) => item.badge.toLowerCase() === value);
-                                case 'featured':
-                                  return values.some((value) => {
-                                    if (value === 'featured') return item.featured === true;
-                                    if (value === 'not-featured') return item.featured === false;
-                                    return false;
-                                  });
-                                default:
-                                  return false;
-                              }
-                            });
-
-                            if (!matchesFilters) return false;
-                          }
-                          return true;
-                        })
-                        .slice((currentPage - 1) * perPage, currentPage * perPage)
-                        .map((item) => (
+                    {showEmptyState ? (
+                      <EmptyState 
+                        titleText="No results found" 
+                        headingLevel="h4" 
+                        icon={SearchIcon}
+                      >
+                        <EmptyStateBody>
+                          No catalog items match your current search criteria or selected filters.
+                          <br />
+                          Try adjusting your search terms or clearing some filters.
+                        </EmptyStateBody>
+                        <EmptyStateFooter>
+                          <EmptyStateActions>
+                            <Button
+                              variant={ButtonVariant.primary}
+                              onClick={() => {
+                                setSearchValue('');
+                                setSelectedFilters([]);
+                                setCurrentPage(1);
+                              }}
+                            >
+                              Clear all filters
+                            </Button>
+                          </EmptyStateActions>
+                        </EmptyStateFooter>
+                      </EmptyState>
+                    ) : (
+                      <Grid hasGutter>
+                        {paginatedItems.map((item) => (
                           <GridItem key={item.id} span={4}>
                             {renderCatalogTile(item)}
                           </GridItem>
                         ))}
-                    </Grid>
+                      </Grid>
+                    )}
                   </SplitItem>
                 </Split>
               </PageSection>
