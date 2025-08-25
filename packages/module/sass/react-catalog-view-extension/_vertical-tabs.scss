@@ -1,15 +1,15 @@
 .vertical-tabs-pf {
   list-style: none;
-  margin: 0 0 30px;
+  margin: 0 0 var(--pf-t--global--spacer--lg);
   padding: 0;
 
   .vertical-tabs-pf {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 .vertical-tabs-pf-tab {
-  margin-top: 4px;
+  margin-block-start: var(--pf-t--global--spacer--sm);
   position: relative;
 
   > a {
@@ -17,10 +17,11 @@
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
-    padding: 3px 6px 3px 15px;
+    padding: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--md);
     vertical-align: top;
     width: 100%;
     word-break: break-word;
+    border-radius: var(--pf-t--global--border--radius--small);
 
     &:hover,
     &:focus {
@@ -42,26 +43,25 @@
 
   &.active {
     > a {
-      color: var(--pf-t--global--text--color--brand--clicked);
 
       &::before {
         background: var( --pf-t--global--border--color--brand--clicked);
         content: "\00a0"; // &nbsp;
         left: 0;
         position: absolute;
-        width: 3px;
+        width: var(--pf-t--global--border--width--extra-strong);
       }
     }
   }
 
   &:first-of-type {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 
   > .vertical-tabs-pf {
     > .vertical-tabs-pf-tab {
       position: initial;
-      padding-left: 15px;
+      padding-inline-start: var(--pf-t--global--spacer--md);
     }
   }
 }

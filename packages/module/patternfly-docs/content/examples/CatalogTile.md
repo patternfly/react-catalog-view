@@ -11,7 +11,6 @@ import { CatalogTile, CatalogTileBadge } from '@patternfly/react-catalog-view-ex
 import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import OutlinedCheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-check-circle-icon';
 import pfLogo6 from './pfLogo6.svg';
-import './catalogTile.css';
 
 ## Introduction
 

@@ -3,13 +3,15 @@ import { Card, CardHeader, CardTitle, CardBody, CardFooter, CardProps } from '@p
 import { css } from '@patternfly/react-styles';
 import { getUniqueId } from '@patternfly/react-core';
 
-export interface CatalogTileProps extends Omit<CardProps, 'title'> {
+export interface CatalogTileProps extends Omit<CardProps, 'title' | 'isSelected'> {
   /** Id */
   id?: any;
   /** Additional css classes */
   className?: string;
   /** Flag if the tile is 'featured' */
   featured: boolean;
+  /** Flag if the tile is selected */
+  isSelected?: boolean;
   /** Callback for a click on the tile */
   onClick?: (event: React.FormEvent<HTMLInputElement> | React.MouseEvent<Element, MouseEvent>) => void;
   /** href for the tile if used as a link */
@@ -47,6 +49,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
     id: null as string,
     className: '',
     featured: false,
+    isSelected: false,
     onClick: null as (event: React.SyntheticEvent<HTMLElement>) => void,
     href: null as string,
     iconImg: null as string,
@@ -102,6 +105,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
       id,
       className,
       featured,
+      isSelected,
       onClick,
       href,
       icon,
@@ -122,7 +126,7 @@ export class CatalogTile extends React.Component<CatalogTileProps> {
     return (
       <Card
         id={id || this.generatedId}
-        className={css('catalog-tile-pf', { featured }, className)}
+        className={css('catalog-tile-pf', { featured }, { 'pf-m-selected': isSelected }, className)}
         variant={featured ? 'secondary' : 'default'}
         isClickable={(onClick || href) ? true : false}
         {...props}

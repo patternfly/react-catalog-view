@@ -10,10 +10,10 @@
 }
 
 .catalog-item-header-pf-text {
-  margin-left: 20px;
+  margin-inline-start: var(--pf-t--global--spacer--md);
 }
 
 .catalog-item-header-pf-subtitle {
   color: var(--pf-t--global--text--color--subtle);
-  margin-bottom: 0;
+  margin-block-end: 0;
 }

@@ -1,7 +1,4 @@
 .catalog-tile-pf {
-  &.featured {
-    border-top: 2px solid var(--pf-t--global--border--color--brand--default);
-  }
 
   &:active,
   &:hover,
@@ -16,24 +13,17 @@
   }
   
   .pf-v6-c-card__actions {
-    padding-left: 5px;
+    padding-inline-start: var(--pf-t--global--spacer--sm);
   }
 }
 
 .catalog-tile-pf-header {
-  font-size: 16px;
-  font-weight: 400;
-  padding-bottom: 16px;
-
-  .catalog-tile-pf-title {
-    font-size: 15px;
-    font-weight: 400;
-  }
 
   .catalog-tile-pf-subtitle {
     color: var(--pf-t--global--text--color--subtle);
-    font-size: 13px;
+    font-size: var(--pf-t--global--FontSize--sm);
     font-weight: initial;
+    padding-block-start: var(--pf-t--global--spacer--sm);
 
     a,
     a:hover {
@@ -61,7 +51,7 @@
 }
 
 .catalog-tile-pf-description {
-  margin-top: 0;
+  margin-block-start: 0;
 
   span {
     display: -webkit-box;

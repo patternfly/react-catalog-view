@@ -16,8 +16,6 @@ import CcVisaIcon from '@patternfly/react-icons/dist/esm/icons/cc-visa-icon';
 import CcMastercardIcon from '@patternfly/react-icons/dist/esm/icons/cc-mastercard-icon';
 import CcDinersClubIcon from '@patternfly/react-icons/dist/esm/icons/cc-diners-club-icon';
 
-import './filterSidePanel.css';
-
 ## Introduction
 
 Note: FilterSidePanel lives in its own package at [`@patternfly/react-catalog-view-extension`](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension)!

@@ -3,21 +3,19 @@
 }
 
 .properties-side-panel-pf-property {
-  margin-top: 24px;
+  margin-block-start: var(--pf-t--global--spacer--lg);
 
   &:first-of-type {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 
 .properties-side-panel-pf-property-label {
   font-weight: 700 !important;
-  font-size: 14px !important;
   margin: 0 !important;
 }
 
 .properties-side-panel-pf-property-value {
-  font-size: 14px !important;
-  margin-top: 8px;
+  margin-block-start: var(--pf-t--global--spacer--sm);
   word-break: break-word;
 }
