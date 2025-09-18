@@ -49,18 +49,18 @@
     "react-dom": "^17 || ^18 || ^19"
   },
   "devDependencies": {
-    "@patternfly/patternfly": "^6.1.0",
-    "@patternfly/documentation-framework": "6.8.2",
-    "@patternfly/react-table": "^6.1.0",
-    "@patternfly/react-code-editor": "^6.1.0",
     "@octokit/rest": "^18.0.0",
-    "surge": "^0.23.1",
-    "react-monaco-editor": "0.51.0",
+    "@patternfly/documentation-framework": "6.8.2",
+    "@patternfly/patternfly": "^6.1.0",
+    "@patternfly/patternfly-a11y": "^4.3.1",
+    "@patternfly/react-code-editor": "^6.1.0",
+    "@patternfly/react-table": "^6.1.0",
     "monaco-editor": "0.34.1",
+    "react-monaco-editor": "0.51.0",
     "rimraf": "^2.6.2",
-    "sass": "^1.42.1",
+    "sass": "^1.80.0",
     "shx": "^0.3.2",
-    "tslib": "^2.0.0",
-    "@patternfly/patternfly-a11y": "^4.3.1"
+    "surge": "^0.23.1",
+    "tslib": "^2.0.0"
   }
 }
