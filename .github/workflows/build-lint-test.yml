@@ -7,16 +7,17 @@ jobs:
     env:
       GH_PR_NUM: ${{ github.event.number }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: |
           if [[ ! -z "${GH_PR_NUM}" ]]; then 
             echo "Checking out PR"
             git fetch origin pull/$GH_PR_NUM/head:tmp
             git checkout tmp
           fi
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - run: corepack enable
       - uses: actions/cache@v4
         id: yarn-cache
         name: Cache npm deps
@@ -24,8 +25,9 @@ jobs:
           path: |
            node_modules
            **/node_modules
-          key: ${{ runner.os }}-yarn-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+           .yarn/cache
+          key: ${{ runner.os }}-yarn-4-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
+      - run: yarn install --immutable
         if: steps.yarn-cache.outputs.cache-hit != 'true'
       - uses: actions/cache@v4
         id: dist
@@ -33,7 +35,7 @@ jobs:
         with:
           path: |
             packages/*/dist
-          key: ${{ runner.os }}-dist-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock', 'package.json', 'packages/*/*', '!packages/*/dist', '!packages/*/node_modules') }}
+          key: ${{ runner.os }}-dist-4-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock', 'package.json', 'packages/*/*', '!packages/*/dist', '!packages/*/node_modules') }}
       - name: Build dist
         run: yarn build
         if: steps.dist.outputs.cache-hit != 'true'
@@ -43,16 +45,17 @@ jobs:
       GH_PR_NUM: ${{ github.event.number }}
     needs: build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: |
           if [[ ! -z "${GH_PR_NUM}" ]]; then 
             echo "Checking out PR"
             git fetch origin pull/$GH_PR_NUM/head:tmp
             git checkout tmp
           fi
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - run: corepack enable
       - uses: actions/cache@v4
         id: yarn-cache
         name: Cache npm deps
@@ -60,15 +63,16 @@ jobs:
           path: |
            node_modules
            **/node_modules
-          key: ${{ runner.os }}-yarn-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+           .yarn/cache
+          key: ${{ runner.os }}-yarn-4-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
+      - run: yarn install --immutable
         if: steps.yarn-cache.outputs.cache-hit != 'true'
       - uses: actions/cache@v4
         id: lint-cache
         name: Load lint cache
         with:
           path: '.eslintcache'
-          key: ${{ runner.os }}-lint-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-lint-4-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
       - name: ESLint
         run: yarn lint:js
       - name: MDLint
@@ -79,7 +83,7 @@ jobs:
       GH_PR_NUM: ${{ github.event.number }}
     needs: build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       # Yes, we really want to checkout the PR
       - run: |
           if [[ ! -z "${GH_PR_NUM}" ]]; then 
@@ -87,9 +91,10 @@ jobs:
             git fetch origin pull/$GH_PR_NUM/head:tmp
             git checkout tmp
           fi
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - run: corepack enable
       - uses: actions/cache@v4
         id: yarn-cache
         name: Cache npm deps
@@ -99,7 +104,7 @@ jobs:
            **/node_modules
            ~/.cache/Cypress
           key: ${{ runner.os }}-yarn-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
         if: steps.yarn-cache.outputs.cache-hit != 'true'
       - uses: actions/cache@v4
         id: dist
@@ -108,7 +113,7 @@ jobs:
           path: |
             packages/*/dist
             packages/react-styles/css
-          key: ${{ runner.os }}-dist-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock', 'package.json', 'packages/*/*', '!packages/*/dist', '!packages/*/node_modules') }}
+          key: ${{ runner.os }}-dist-4-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock', 'package.json', 'packages/*/*', '!packages/*/dist', '!packages/*/node_modules') }}
       - name: Build dist
         run: yarn build
         if: steps.dist.outputs.cache-hit != 'true'
@@ -120,7 +125,7 @@ jobs:
       GH_PR_NUM: ${{ github.event.number }}
     needs: build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       # Yes, we really want to checkout the PR
       - run: |
           if [[ ! -z "${GH_PR_NUM}" ]]; then 
@@ -128,9 +133,10 @@ jobs:
             git fetch origin pull/$GH_PR_NUM/head:tmp
             git checkout tmp
           fi
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - run: corepack enable
       - uses: actions/cache@v4
         id: yarn-cache
         name: Cache npm deps
@@ -140,7 +146,7 @@ jobs:
            **/node_modules
            ~/.cache/Cypress
           key: ${{ runner.os }}-yarn-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
         if: steps.yarn-cache.outputs.cache-hit != 'true'
       - uses: actions/cache@v4
         id: dist
@@ -149,7 +155,7 @@ jobs:
           path: |
             packages/*/dist
             packages/react-styles/css
-          key: ${{ runner.os }}-dist-14-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock', 'package.json', 'packages/*/*', '!packages/*/dist', '!packages/*/node_modules') }}
+          key: ${{ runner.os }}-dist-4-${{ secrets.CACHE_VERSION }}-${{ hashFiles('yarn.lock', 'package.json', 'packages/*/*', '!packages/*/dist', '!packages/*/node_modules') }}
       - name: Build dist
         run: yarn build
         if: steps.dist.outputs.cache-hit != 'true'
