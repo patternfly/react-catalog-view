@@ -33,7 +33,26 @@
 
   &:hover {
     background-color: var(--pf-t--global--background--color--action--plain--hover);
-  }
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: var(--pf-t--global--border--width--high-contrast--regular);
+      border-style: solid;
+      border-color: transparent;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    &::after {
+      border-color: var(--pf-t--global--border--color--high-contrast);
+    }
+}
 
   .pf-v6-c-check__label {
     min-height: var(--pf-t--global--spacer--md);
