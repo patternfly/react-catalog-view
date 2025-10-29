@@ -22,11 +22,30 @@
     width: 100%;
     word-break: break-word;
     border-radius: var(--pf-t--global--border--radius--small);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: var(--pf-t--global--border--width--high-contrast--regular);
+      border-style: solid;
+      border-color: transparent;
+      border-radius: inherit;
+      pointer-events: none;
+    }
 
     &:hover,
     &:focus {
       background-color: var(--pf-t--global--background--color--action--plain--hover);
       text-decoration: none;
+
+      &::after {
+        border-color: var(--pf-t--global--border--color--high-contrast);
+      }
     }
 
     &.no-wrap {
