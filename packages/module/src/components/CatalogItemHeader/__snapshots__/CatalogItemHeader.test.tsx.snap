@@ -10,7 +10,7 @@ exports[`simple catalog item header 1`] = `
     >
       <h1
         class="pf-v6-c-title pf-m-h1 catalog-item-header-pf-title"
-        data-ouia-component-id="OUIA-Generated-Title-1"
+        data-ouia-component-id="OUIA-Generated-Title-:r0:"
         data-ouia-component-type="PF6/Title"
         data-ouia-safe="true"
       >
@@ -18,7 +18,7 @@ exports[`simple catalog item header 1`] = `
       </h1>
       <p
         class="pf-v6-c-content--p catalog-item-header-pf-subtitle"
-        data-ouia-component-id="OUIA-Generated-Content-1"
+        data-ouia-component-id="OUIA-Generated-Content-:r1:"
         data-ouia-component-type="PF6/Content"
         data-ouia-safe="true"
         data-pf-content="true"

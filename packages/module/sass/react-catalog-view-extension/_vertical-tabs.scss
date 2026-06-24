@@ -18,15 +18,30 @@
     margin-inline-start: var(--pf-t--global--spacer--md);
   }
 
+  &::before {
+    background: var(--pf-t--global--color--brand--accent--default);
+    border-radius: var(--pf-t--global--border--radius--pill);
+    content: "\00a0"; // &nbsp;
+    inset-inline-start: 0;
+    inset-block-start: var(--pf-t--global--spacer--xs);
+    position: absolute;
+    width: var(--pf-t--global--border--width--extra-strong);
+    pointer-events: none;
+    transition-timing-function: var(--pf-t--global--motion--timing-function--decelerate);
+    transition-duration: 0ms;
+    transition-property: scale;
+    scale: 1 0;
+  }
+
   > a {
-    color: var( --pf-t--global--text--color--regular);
+    color: var( --pf-t--global--text--color--subtle);
     text-decoration: none;
     display: block;
-    margin-inline-start: var(--pf-t--global--spacer--md);
+    margin-inline-start: calc(var(--pf-t--global--spacer--md) - var(--pf-t--global--border--width--extra-strong));
     padding: var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--sm);
     vertical-align: top;
     word-break: break-word;
-    border-radius: var(--pf-t--global--border--radius--small);
+    border-radius: var(--pf-t--global--border--radius--action--plain--default);
     position: relative;
 
     &::after {
@@ -40,6 +55,7 @@
 
     &:hover,
     &:focus {
+      color: var( --pf-t--global--text--color--regular);
       background-color: var(--pf-t--global--background--color--action--plain--hover);
       text-decoration: none;
 
@@ -62,13 +78,13 @@
   }
 
   &.active {
+    > a {
+      color: var( --pf-t--global--text--color--regular);
+    }
+    
       &::before {
-        background: var( --pf-t--global--border--color--brand--clicked);
-        content: "\00a0"; // &nbsp;
-        inset-inline-start: 0;
-        inset-block-start: var(--pf-t--global--spacer--xs);
-        position: absolute;
-        width: var(--pf-t--global--border--width--extra-strong);
+        transition-duration: var(--pf-t--global--motion--duration--fade--default);
+        scale: 1 1;
       }
   }
 
