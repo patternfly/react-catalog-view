@@ -55,5 +55,13 @@
     "serve": "^14.1.2",
     "typescript": "^4.7.4"
   },
-  "packageManager": "yarn@4.5.3"
+  "dependenciesMeta": {
+    "chromedriver": {
+      "built": true
+    },
+    "puppeteer": {
+      "built": true
+    }
+  },
+  "packageManager": "yarn@4.18.1"
 }
